@@ -1,0 +1,13 @@
+---
+packages:
+  - at
+  - bmon
+  - htop
+  - lftp
+  - mtr
+  - ncdu 
+  - pv
+  - pydf
+  - ranger
+  - rsync
+  - tmux

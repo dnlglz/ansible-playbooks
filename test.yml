@@ -1,0 +1,5 @@
+---
+- name: Test roles
+  hosts: all
+  roles: 
+    - { role: utils }
