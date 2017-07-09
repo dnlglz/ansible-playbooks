@@ -2,8 +2,8 @@
 - name: Test roles
   hosts: all
   roles: 
-    - { role: docker }
+    # - { role: docker }
     # - { role: audio }
     # - { role: image }
     # - { role: utils }
-    # - { role: video }
+    - { role: video }

@@ -1,4 +1,6 @@
 ---
 packages:
+  - ffmpeg
   - vlc
   - smplayer
+  - blender
