@@ -3,3 +3,6 @@
   hosts: all
   roles: 
     - { role: audio }
+    - { role: image }
+    - { role: utils }
+    - { role: video }
