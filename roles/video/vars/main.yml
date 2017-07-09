@@ -4,3 +4,7 @@ packages:
   - vlc
   - smplayer
   - blender
+
+scripts:
+  - extractmp3.sh
+  - trec2mp4.sh
