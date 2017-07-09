@@ -2,4 +2,4 @@
 - name: Test roles
   hosts: all
   roles: 
-    - { role: video }
+    - { role: audio }
