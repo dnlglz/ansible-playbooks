@@ -1,0 +1,4 @@
+- name: Install video packages
+  package: name={{ item }} state=present
+  with_items: "{{ packages }}"
+  become: True
