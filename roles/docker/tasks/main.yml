@@ -1,4 +1,23 @@
-- name: Install docker packages
-  package: name={{ item }} state=present
-  with_items: "{{ packages }}"
+- name: Install docker packages for debian family
+  apt: name={{ item }} state=present
+  with_items: "{{ packages_debian }}"
   become: True
+  when: ansible_pkg_mgr == "apt"
+  
+- name: Install docker packages for arch family
+  pacman: name={{ item }} state=present
+  with_items: "{{ packages_arch }}"
+  become: True
+  when: ansible_pkg_mgr == "pacman"
+
+- name: Install docker packages for all families
+  package: name={{ item }} state=present
+  with_items: "{{ packages_common }}"
+  become: True
+
+- name: Add current user to docker group
+  user: 
+    name: "{{ ansible_env.USER }}"
+    groups: docker
+    append: yes
+  become: yes

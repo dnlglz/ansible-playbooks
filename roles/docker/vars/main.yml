@@ -1,4 +1,10 @@
 ---
-packages:
+
+packages_arch:
   - docker
+
+packages_debian:
+  - docker.io
+
+packages_common:
   - docker-compose
