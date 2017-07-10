@@ -2,3 +2,15 @@
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
   become: True
+
+- name: Install util packages for arch family
+  pacman: name={{ item }} state=present
+  with_items: "{{ packages_arch }}"
+  become: True
+  when: ansible_pkg_mgr == "pacman"
+
+- name: Install util packages for debian family
+  apt: name={{ item }} state=present
+  with_items: "{{ packages_debian }}"
+  become: True
+  when: ansible_pkg_mgr == "apt"

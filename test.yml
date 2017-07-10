@@ -3,8 +3,8 @@
   hosts: all
   roles: 
     # - { role: audio }
-    - { role: docker }
+    # - { role: docker }
     # - { role: image }
     # - { role: tmux }
-    # - { role: utils }
+    - { role: utils }
     # - { role: video }
