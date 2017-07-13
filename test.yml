@@ -2,9 +2,9 @@
 - name: Test roles
   hosts: all
   roles: 
-    # - { role: audio }
-    # - { role: docker }
-    # - { role: image }
-    # - { role: tmux }
     - { role: utils }
-    # - { role: video }
+    - { role: docker }
+    - { role: tmux }
+    - { role: image }
+    - { role: audio }
+    - { role: video }
