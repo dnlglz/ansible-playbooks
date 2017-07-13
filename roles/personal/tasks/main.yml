@@ -1,0 +1,28 @@
+- name: Set git name 
+  git_config:
+    name: user.name
+    scope: global
+    value: "{{ git_name }}"
+  become: False
+
+- name: Set git email 
+  git_config:
+    name: user.email
+    scope: global
+    value: "{{ git_email }}"
+  become: False
+  
+- name: Set git default editor
+  git_config:
+    name: core.editor
+    scope: global
+    value: vim
+  become: False
+
+- name: Set git color ui
+  git_config:
+    name: color.ui
+    scope: global
+    value: auto
+  become: False
+

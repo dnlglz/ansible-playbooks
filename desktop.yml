@@ -3,6 +3,7 @@
   hosts: all
   roles: 
     - { role: utils }
+    - { role: personal }
     - { role: docker }
     - { role: tmux }
     - { role: image }
