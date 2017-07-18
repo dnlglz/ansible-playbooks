@@ -31,3 +31,9 @@
     path: ~/.bashrc
     regexp: '^export EDITOR='
     line: 'export EDITOR=vim'
+
+- name: Add cc alias
+  lineinfile:
+    path: ~/.bashrc
+    regexp: 'alias cc='
+    line: "alias cc='cd \"$(pwd)\"'"
