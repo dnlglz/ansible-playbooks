@@ -26,3 +26,8 @@
     value: auto
   become: False
 
+- name: Set vim as default editor
+  lineinfile:
+    path: ~/.bashrc
+    regexp: '^export EDITOR='
+    line: 'export EDITOR=vim'

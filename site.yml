@@ -3,7 +3,7 @@
   hosts: localhost
   roles: 
     - { role: utils, tags: ['desktop', 'server'] }
-    - { role: personal, tags: ['desktop']  }
+    - { role: personal, tags: ['desktop', 'test']  }
     - { role: docker, tags: ['desktop', 'server']  }
     - { role: tmux, tags: ['desktop', 'server']  }
     - { role: image, tags: ['desktop']  }
