@@ -11,6 +11,13 @@
     scope: global
     value: "{{ git_email }}"
   become: False
+
+- name: Set git default push
+  git_config:
+    name: push.default
+    scope: global
+    value: "matching"
+  become: False
   
 - name: Set git default editor
   git_config:
