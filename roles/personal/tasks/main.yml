@@ -44,3 +44,9 @@
     path: ~/.bashrc
     regexp: 'alias cc='
     line: "alias cc='cd \"$(pwd)\"'"
+
+- name: Create or attach to tmux session
+  lineinfile:
+    path: ~/.bashrc
+    regexp: '^(.*)tmux -2 new-session -A -s initial(.*)'
+    line: '{{ tmux }}'

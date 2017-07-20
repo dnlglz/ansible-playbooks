@@ -3,3 +3,4 @@
 git_name: "Daniel González"
 git_email: "gonzalez.lopez.daniel@gmail.com"
 editor: "vim"
+tmux: 'if [ -z "$TMUX" ]; then tmux -2 new-session -A -s initial; fi'
