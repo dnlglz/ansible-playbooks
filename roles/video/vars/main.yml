@@ -1,9 +1,10 @@
 ---
 packages:
-  - ffmpeg
-  - vlc
-  - smplayer
+  - avidemux-qt
   - blender
+  - ffmpeg
+  - smplayer
+  - vlc
 
 scripts:
   - extractmp3.sh
