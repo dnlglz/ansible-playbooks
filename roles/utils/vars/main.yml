@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - ark
   - at
   - bmon
   - htop
