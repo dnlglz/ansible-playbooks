@@ -2,8 +2,8 @@
 - name: All roles
   hosts: localhost
   roles: 
-    - { role: utils, tags: ['desktop', 'server'] }
-    - { role: personal, tags: ['desktop', 'test']  }
+    - { role: utils, tags: ['desktop', 'server', 'test'] }
+    - { role: personal, tags: ['desktop']  }
     - { role: docker, tags: ['desktop', 'server']  }
     - { role: tmux, tags: ['desktop', 'server']  }
     - { role: image, tags: ['desktop']  }

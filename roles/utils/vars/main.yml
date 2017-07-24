@@ -12,6 +12,7 @@ packages:
   - ranger
   - rsync
   - tmux
+  - tree
 
 packages_arch:
   - openssh
