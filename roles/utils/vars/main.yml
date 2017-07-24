@@ -1,7 +1,6 @@
 ---
 
 packages:
-  - anacron
   - at
   - bmon
   - htop
@@ -19,5 +18,6 @@ packages_arch:
   - openssh
 
 packages_debian:
+  - anacron
   - openssh-client
   - openssh-server
