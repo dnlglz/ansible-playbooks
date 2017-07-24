@@ -16,6 +16,7 @@ packages:
 
 packages_arch:
   - openssh
+  - cronie
 
 packages_debian:
   - anacron
