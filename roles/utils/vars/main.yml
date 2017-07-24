@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - anacron
   - at
   - bmon
   - htop
