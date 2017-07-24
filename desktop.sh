@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-playbook -v -c local site.yml -K --become-method=sudo --tags desktop
+time ansible-playbook -v -c local site.yml -K --become-method=sudo --tags desktop
