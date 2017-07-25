@@ -1,6 +1,5 @@
 ---
 packages:
-  - avidemux-qt
   - blender
   - ffmpeg
   - smplayer
