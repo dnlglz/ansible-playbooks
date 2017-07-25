@@ -4,6 +4,7 @@ packages:
   - ark
   - at
   - bmon
+  - git
   - htop
   - lftp
   - mtr
