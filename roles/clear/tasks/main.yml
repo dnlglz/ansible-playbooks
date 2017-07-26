@@ -1,0 +1,16 @@
+- name: Remove packages
+  package: name={{ item }} state=absent
+  with_items: "{{ packages }}"
+  become: True
+
+- name: Remove packages for arch family
+  pacman: name={{ item }} state=absent
+  with_items: "{{ packages_arch }}"
+  become: True
+  when: ansible_pkg_mgr == "pacman"
+
+- name: Remove packages for debian family
+  apt: name={{ item }} state=absent
+  with_items: "{{ packages_debian }}"
+  become: True
+  when: ansible_pkg_mgr == "apt"
