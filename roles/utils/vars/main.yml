@@ -21,5 +21,6 @@ packages_arch:
 
 packages_debian:
   - anacron
+  - aptitude 
   - openssh-client
   - openssh-server
