@@ -50,3 +50,9 @@
     path: ~/.bashrc
     regexp: '^(.*)tmux -2 new-session -A -s initial(.*)'
     line: '{{ tmux }}'
+
+- name: Set autocd in bashrc
+  lineinfile:
+    path: ~/.bashrc
+    regexp: 'shopt -s autocd'
+    line: 'shopt -s autocd'
