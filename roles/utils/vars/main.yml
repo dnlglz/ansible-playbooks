@@ -4,10 +4,12 @@ packages:
   - at
   - bmon
   - git
+  - gnupg
   - htop
   - lftp
   - mtr
   - ncdu 
+  - openssl
   - pv
   - pydf
   - ranger
