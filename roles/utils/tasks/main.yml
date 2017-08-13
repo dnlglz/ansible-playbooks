@@ -14,3 +14,18 @@
   with_items: "{{ packages_debian }}"
   become: True
   when: ansible_pkg_mgr == "apt"
+
+- name: Create ansible log file
+  copy:
+    dest: /var/log/ansible.log
+    content: ""
+    force: no
+    mode: 0666
+  become: True
+
+- name: Set up ansible logging
+  lineinfile:
+    path: "/etc/ansible/ansible.cfg"
+    regexp: '^#?log_path'
+    line: 'log_path = /var/log/ansible.log'
+  become: True
