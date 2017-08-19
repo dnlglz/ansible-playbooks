@@ -15,17 +15,19 @@
 
 - name: Ensure repos directory exists
   file:
-    path="~/repos"
+    path="/var/repos"
     state="directory"
+    mode="o+rwx"
+  become: True
 
 - name: Clone pulverize repo
   git: 
     repo="https://github.com/sciactive/pulverize"
-    dest="~/repos/pulverize"
+    dest="/var/repos/pulverize"
     
 - name: Link pulverize.php into /usr/local/bin
   file:
-    src="~/repos/pulverize/pulverize.php"
+    src="/var/repos/pulverize/pulverize.php"
     dest="/usr/local/bin/pulverize.php"
     state="link"
   become: True
