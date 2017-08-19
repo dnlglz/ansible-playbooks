@@ -13,3 +13,18 @@
   with_items: "{{ scripts }}"
   become: True
 
+- name: Ensure repos directory exists
+  file:
+    path="~/repos"
+    state="directory"
+
+- name: Clone pulverize repo
+  git: 
+    repo="https://github.com/sciactive/pulverize"
+    dest="~/repos/pulverize"
+    
+- name: Link pulverize.php into /usr/local/bin
+  file:
+    src="~/repos/pulverize/pulverize.php"
+    dest="/usr/local/bin/pulverize.php"
+    state="link"

@@ -2,11 +2,11 @@
 - name: All roles
   hosts: localhost
   roles: 
-    - { role: utils, tags: ['desktop', 'test'] }
+    - { role: utils, tags: ['desktop'] }
     - { role: personal, tags: ['desktop']  }
     - { role: docker, tags: ['desktop', 'server']  }
     - { role: tmux, tags: ['desktop', 'server']  }
     - { role: image, tags: ['desktop']  }
     - { role: audio, tags: ['desktop']  }
-    - { role: video, tags: ['desktop']  }
+    - { role: video, tags: ['desktop', 'test']  }
     - { role: clear, tags: ['desktop'] }
