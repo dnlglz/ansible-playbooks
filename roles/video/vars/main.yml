@@ -4,6 +4,7 @@ packages:
   - ffmpeg
   - smplayer
   - vlc
+  - php #for pulverize repository
 
 scripts:
   - extractmp3.sh
