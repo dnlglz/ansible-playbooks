@@ -2,6 +2,7 @@
 - name: All roles
   hosts: localhost
   roles: 
+    - { role: system, tags: ['desktop', 'server'] }
     - { role: utils, tags: ['desktop'] }
     - { role: personal, tags: ['desktop']  }
     - { role: docker, tags: ['desktop', 'server']  }

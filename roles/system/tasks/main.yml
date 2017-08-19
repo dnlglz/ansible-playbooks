@@ -1,0 +1,7 @@
+- name: Ensure repos directory exists
+  file:
+    path="/var/repos"
+    state="directory"
+    mode="o+rwx"
+  become: True
+
