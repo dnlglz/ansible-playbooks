@@ -35,24 +35,24 @@
 
 - name: Set vim as default editor
   lineinfile:
-    path: ~/.bashrc
+    dest: ~/.bashrc
     regexp: '^export EDITOR='
     line: 'export EDITOR=vim'
 
 - name: Add cc alias
   lineinfile:
-    path: ~/.bashrc
+    dest: ~/.bashrc
     regexp: 'alias cc='
     line: "alias cc='cd \"$(pwd)\"'"
 
 - name: Create or attach to tmux session
   lineinfile:
-    path: ~/.bashrc
+    dest: ~/.bashrc
     regexp: '^(.*)tmux -2 new-session -A -s initial(.*)'
     line: '{{ tmux }}'
 
 - name: Set autocd in bashrc
   lineinfile:
-    path: ~/.bashrc
+    dest: ~/.bashrc
     regexp: 'shopt -s autocd'
     line: 'shopt -s autocd'

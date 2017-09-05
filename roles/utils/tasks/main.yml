@@ -25,7 +25,7 @@
 
 - name: Set up ansible logging
   lineinfile:
-    path: "/etc/ansible/ansible.cfg"
+    dest: "/etc/ansible/ansible.cfg"
     regexp: '^#?log_path'
     line: 'log_path = /var/log/ansible.log'
   become: True
