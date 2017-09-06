@@ -61,4 +61,4 @@
   git_config:
     name: alias.lg
     scope: global
-    value: "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative"
+    value: 'log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset" --abbrev-commit --date=relative'
