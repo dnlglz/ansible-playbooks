@@ -56,3 +56,9 @@
     dest: ~/.bashrc
     regexp: 'shopt -s autocd'
     line: 'shopt -s autocd'
+
+- name: Prettier log
+  git_config:
+    name: alias.lg
+    scope: global
+    value: "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset' --abbrev-commit --date=relative"
