@@ -9,5 +9,5 @@
     - { role: tmux, tags: ['desktop', 'server']  }
     - { role: image, tags: ['desktop']  }
     - { role: audio, tags: ['desktop']  }
-    - { role: video, tags: ['desktop', 'test']  }
+    - { role: video, tags: ['desktop']  }
     - { role: clear, tags: ['desktop'] }

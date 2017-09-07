@@ -62,3 +62,13 @@
     name: alias.lg
     scope: global
     value: 'log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset" --abbrev-commit --date=relative'
+
+- name: XFCE4 Terminal config
+  copy: 
+    src: "{{ role_path }}/files/terminalrc"
+    dest: "~/.config/xfce4/terminal"
+    backup: yes
+  ignore_errors: yes
+  tags: test
+
+
