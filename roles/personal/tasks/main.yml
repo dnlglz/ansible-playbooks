@@ -71,4 +71,11 @@
   ignore_errors: yes
   tags: test
 
+- name: XFCE4 Keybindings
+  copy: 
+    src: "{{ role_path }}/files/xfce4-keyboard-shortcuts.xml"
+    dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
+    backup: yes
+  ignore_errors: yes
+  tags: test
 
