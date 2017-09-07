@@ -3,6 +3,7 @@
 packages:
   - at
   - bmon
+  - byobu #For remove-old-kernels
   - git
   - gnupg
   - htop
