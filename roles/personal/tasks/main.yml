@@ -70,7 +70,6 @@
     force: yes
     state: link
   ignore_errors: yes
-  tags: test
 
 - name: XFCE4 Keybindings
   file: 
@@ -79,11 +78,8 @@
     state: link
     force: yes
   ignore_errors: yes
-  tags: test
   with_items:
     - "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
-    # - "/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
-    # - "/usr/share/mint-configuration-xfce/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
 
 - name: XFCE4 Keybindings root
   file: 
@@ -92,9 +88,6 @@
     state: link
     force: yes
   ignore_errors: yes
-  tags: test
-  become: yes
   with_items:
-    # - "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
     - "/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
     - "/usr/share/mint-configuration-xfce/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
