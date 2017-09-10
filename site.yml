@@ -2,12 +2,12 @@
 - name: All roles
   hosts: localhost
   roles: 
-    - { role: system, tags: ['desktop', 'server'] }
+    - { role: system, tags: ['desktop', 'server'], update_script: "test2.sh" }
     - { role: utils, tags: ['desktop'] }
     - { role: personal, tags: ['desktop']  }
     - { role: docker, tags: ['desktop', 'server']  }
     - { role: tmux, tags: ['desktop', 'server']  }
     - { role: image, tags: ['desktop']  }
     - { role: audio, tags: ['desktop']  }
-    - { role: video, tags: ['desktop']  }
+    - { role: video, tags: ['desktop'] }
     - { role: clear, tags: ['desktop'] }
