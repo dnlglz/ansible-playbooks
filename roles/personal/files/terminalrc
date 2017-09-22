@@ -28,4 +28,5 @@ TabActivityColor=#dc322f
 DropdownWidth=100
 DropdownHeight=95
 DropdownAlwaysShowTabs=FALSE
-
+DropdownKeepOpenDefault=TRUE
+DropdownToggleFocus=FALSE
