@@ -6,6 +6,7 @@ packages:
   - byobu #For remove-old-kernels
   - git
   - gnupg
+  - gparted
   - htop
   - lftp
   - mtr
