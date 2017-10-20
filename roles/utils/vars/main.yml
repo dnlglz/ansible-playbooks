@@ -16,6 +16,7 @@ packages:
   - pydf
   - ranger
   - rsync
+  - task-spooler
   - tmux
   - tree
 
