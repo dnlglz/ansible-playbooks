@@ -17,6 +17,8 @@ packages:
   - ranger
   - rsync
   - task-spooler
+  - tlp
+  - tlp-rdw
   - tmux
   - tree
 
