@@ -9,6 +9,7 @@ packages:
   - gparted
   - htop
   - lftp
+  - most
   - mtr
   - ncdu 
   - openssl
