@@ -13,6 +13,7 @@ packages:
   - mtr
   - ncdu 
   - openssl
+  - preload
   - pv
   - pydf
   - ranger
