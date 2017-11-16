@@ -19,6 +19,7 @@ packages:
   - pydf
   - ranger
   - rsync
+  - screenfetch
   - task-spooler
   - tlp
   - tlp-rdw
