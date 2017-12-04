@@ -29,3 +29,10 @@
     regexp: '^#?log_path'
     line: 'log_path = /var/log/ansible.log'
   become: True
+
+- name: Activate undistract-me
+  lineinfile:
+    dest: "~/.bashrc"
+    regexp: ".*undistract-me\\.sh.*"
+    line: "source /etc/profile.d/undistract-me.sh"
+  become: false

@@ -25,6 +25,7 @@ packages:
   - tlp-rdw
   - tmux
   - tree
+  - undistract-me
 
 packages_arch:
   - openssh
