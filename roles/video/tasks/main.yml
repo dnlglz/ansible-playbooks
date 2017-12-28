@@ -1,4 +1,4 @@
-- name: Install ppas
+- name: Remove sylvia obs wrong repo
   apt_repository:
     repo={{ item }}
     state=absent
@@ -6,6 +6,13 @@
   with_items: "{{ ppas }}"
   become: True
 
+- name: Remove sonya obs wrong repo
+  apt_repository:
+    repo={{ item }}
+    state=absent
+    codename="sonya"
+  with_items: "{{ ppas }}"
+  become: True
 - name: Install ppas
   apt_repository:
     repo={{ item }}
