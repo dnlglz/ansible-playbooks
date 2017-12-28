@@ -1,4 +1,7 @@
 ---
+ppas:
+  - "ppa:obsproject/obs-studio"
+
 packages:
   - blender
   - ffmpeg
