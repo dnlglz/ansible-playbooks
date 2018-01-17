@@ -8,6 +8,7 @@ packages:
   - gnupg
   - gparted
   - htop
+  - incron
   - iotop
   - lftp
   - most
