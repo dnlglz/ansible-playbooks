@@ -60,7 +60,7 @@
 - name: Show screenfetch on new terminal
   lineinfile:
     dest: ~/.bashrc
-    regexp: 'if [ -f /usr/bin/screenfetch ]; then screenfetch; fi'
+    regexp: '^.*then screenfetch.*$'
     line: 'if [ -f /usr/bin/screenfetch ]; then screenfetch; fi'
 
 - name: Prettier log
