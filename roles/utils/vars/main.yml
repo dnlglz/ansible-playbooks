@@ -27,6 +27,7 @@ packages:
   - tmux
   - tree
   - undistract-me
+  - xclip
 
 packages_arch:
   - openssh
