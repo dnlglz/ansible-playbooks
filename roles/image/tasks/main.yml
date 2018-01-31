@@ -2,3 +2,28 @@
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
   become: True
+
+- name: install pencil from github
+  git:
+    repo: https://github.com/evolus/pencil
+    # repo: "/tmp/pencil"
+    dest: /var/repos/pencil
+    umask: "000"
+  become: True
+  register: pencil_status
+
+- debug: 
+    var: pencil_status
+
+- name: Install npm dependencies
+  npm:
+    path: "/var/repos/pencil"
+    state: latest
+  when: pencil_status.changed == true
+
+- name: Install script
+  file: 
+    src="{{ role_path }}/files/pencil"
+    dest="/usr/local/bin/pencil"
+    state=link
+  become: True
