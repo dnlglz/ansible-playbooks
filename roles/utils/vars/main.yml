@@ -11,10 +11,12 @@ packages:
   - incron
   - iotop
   - lftp
+  - lmodern #For pandoc to pdf
   - most
   - mtr
   - ncdu 
   - openssl
+  - pandoc
   - preload
   - pv
   - pydf
