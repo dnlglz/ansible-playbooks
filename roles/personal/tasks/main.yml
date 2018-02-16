@@ -69,32 +69,3 @@
     scope: global
     value: 'log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset" --abbrev-commit --date=relative'
 
-- name: XFCE4 Terminal config
-  file: 
-    src: "{{ role_path }}/files/terminalrc"
-    dest: "~/.config/xfce4/terminal/terminalrc"
-    force: yes
-    state: link
-  ignore_errors: yes
-
-- name: XFCE4 Keybindings
-  file: 
-    src: "{{ role_path }}/files/xfce4-keyboard-shortcuts.xml"
-    dest: "{{ item }}"
-    state: link
-    force: yes
-  ignore_errors: yes
-  with_items:
-    - "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
-
-- name: XFCE4 Keybindings root
-  file: 
-    src: "{{ role_path }}/files/xfce4-keyboard-shortcuts.xml"
-    dest: "{{ item }}"
-    state: link
-    force: yes
-  ignore_errors: yes
-  with_items:
-    - "/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
-    - "/usr/share/mint-configuration-xfce/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
-  become: yes
