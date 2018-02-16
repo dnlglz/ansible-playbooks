@@ -11,7 +11,6 @@ packages:
   - incron
   - iotop
   - lftp
-  - lmodern #For pandoc to pdf
   - most
   - mtr
   - ncdu 
@@ -24,6 +23,7 @@ packages:
   - rsync
   - screenfetch
   - task-spooler
+  - texlive-fonts-recommended #for pandoc to pdf
   - tlp
   - tlp-rdw
   - tmux
