@@ -1,0 +1,17 @@
+- name: Purge python packages via apt
+  package: 
+    name={{ item }} state=absent
+  with_items: "{{ purge_packages }}"
+  become: True
+
+- name: Install python packages via apt
+  package: 
+    name={{ item }} state=present
+  with_items: "{{ packages }}"
+  become: True
+
+- name: Install python packages via pip
+  pip:
+    name={{ item }} state=latest executable=pip3
+  with_items: "{{ pip_packages }}"
+  become: True
