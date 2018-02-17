@@ -3,6 +3,7 @@
 packages:
   - at
   - bmon
+  - build-essential
   - byobu #For remove-old-kernels
   - git
   - gnupg
