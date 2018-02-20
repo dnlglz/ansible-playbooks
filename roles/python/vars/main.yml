@@ -35,3 +35,4 @@ pip_packages:
   - scrapy
   - sqlalchemy
   - beautifulsoup4
+  - openpyxl
