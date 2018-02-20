@@ -15,3 +15,11 @@
     name={{ item }} state=latest executable=pip3
   with_items: "{{ pip_packages }}"
   become: True
+
+- name: Ptipython config file
+  file:
+    src={{ role_path }}/files/config.py
+    dest={{ ansible_env.HOME }}/.ptpython/config.py
+    state=link
+    force=True
+  become: False
