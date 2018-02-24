@@ -36,3 +36,7 @@ pip_packages:
   - sqlalchemy
   - beautifulsoup4
   - openpyxl
+  - xonsh
+  - gitsome
+  - psycopg2-binary
+  - pgcli
