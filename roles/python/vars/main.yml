@@ -40,3 +40,4 @@ pip_packages:
   - gitsome
   - psycopg2-binary
   - pgcli
+  - wharfee #docker cli
