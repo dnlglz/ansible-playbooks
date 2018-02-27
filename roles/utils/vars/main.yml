@@ -12,6 +12,7 @@ packages:
   - incron
   - iotop
   - lftp
+  - lnav
   - most
   - mtr
   - ncdu 
