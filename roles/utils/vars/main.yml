@@ -6,6 +6,7 @@ packages:
   - build-essential
   - byobu #For remove-old-kernels
   - git
+  - git-extras
   - gnupg
   - gparted
   - htop
