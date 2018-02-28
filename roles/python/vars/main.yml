@@ -8,6 +8,7 @@ purge_packages:
   - python3-nose
   - python3-scipy
   - python3-seaborn
+  - pylint
 
 packages:
   - ipython3
@@ -41,3 +42,4 @@ pip_packages:
   - psycopg2-binary
   - pgcli
   - wharfee #docker cli
+  - pylint
