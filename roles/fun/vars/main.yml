@@ -1,0 +1,7 @@
+---
+
+packages:
+  - boxes
+  - cmatrix
+  - cowsay
+  - toilet

@@ -5,6 +5,7 @@
     - { role: system, tags: ['desktop', 'server'], update_script: "test2.sh" }
     - { role: utils, tags: ['desktop'] }
     - { role: python, tags: ['desktop','test'] }
+    - { role: fun, tags: ['desktop'] }
     - { role: personal, tags: ['desktop']  }
     - { role: docker, tags: ['desktop', 'server']  }
     - { role: tmux, tags: ['desktop', 'server']  }
