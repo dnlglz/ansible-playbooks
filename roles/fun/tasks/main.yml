@@ -1,4 +1,19 @@
+- name: Ensure ppas are installed
+  apt_repository:
+    repo: "{{ item }}"
+    state: "present"
+    codename: "xenial"
+  with_items: "{{ ppas }}"
+  become: True
+
+- name: Update cache
+  apt:
+    update_cache: True
+  become: True
+
 - name: Install fun packages
-  package: name={{ item }} state=present
+  package: 
+    name: "{{ item }}" 
+    state: present
   with_items: "{{ packages }}"
   become: True
