@@ -43,3 +43,5 @@ pip_packages:
   - pgcli
   - wharfee #docker cli
   - pylint
+  - invoke
+  - flake8
