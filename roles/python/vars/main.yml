@@ -45,3 +45,5 @@ pip_packages:
   - pylint
   - invoke
   - flake8
+  - pyyaml
+  - tmuxp
