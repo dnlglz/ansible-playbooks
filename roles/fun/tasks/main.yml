@@ -3,12 +3,8 @@
     repo: "{{ item }}"
     state: "present"
     codename: "xenial"
-  with_items: "{{ ppas }}"
-  become: True
-
-- name: Update cache
-  apt:
     update_cache: True
+  with_items: "{{ ppas }}"
   become: True
 
 - name: Install fun packages
