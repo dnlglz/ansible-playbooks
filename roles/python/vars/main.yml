@@ -20,6 +20,9 @@ packages:
   - spyder3
   - virtualenv
 
+purge_pip_packages:
+  - xonsh
+
 pip_packages:
   - pip
   - pandas
@@ -28,6 +31,8 @@ pip_packages:
   - ptipython
   - sympy
   - nose
+  - pytest
+  - pytest-xdist
   - scipy
   - scikit-learn
   - statsmodels
@@ -38,7 +43,6 @@ pip_packages:
   - sqlalchemy
   - beautifulsoup4
   - openpyxl
-  - xonsh
   - gitsome
   - psycopg2-binary
   - pgcli
