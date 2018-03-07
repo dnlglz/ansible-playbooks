@@ -23,6 +23,13 @@
     mode: 0666
   become: True
 
+- name: Set up ansible debug mode
+  lineinfile:
+    dest: "/etc/ansible/ansible.cfg"
+    regexp: '^stdout_callback = debug'
+    line: 'stdout_callback = debug'
+  become: True
+
 - name: Set up ansible logging
   lineinfile:
     dest: "/etc/ansible/ansible.cfg"
