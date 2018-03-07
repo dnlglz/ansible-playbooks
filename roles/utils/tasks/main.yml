@@ -28,6 +28,7 @@
     dest: "/etc/ansible/ansible.cfg"
     regexp: '^stdout_callback = debug'
     line: 'stdout_callback = debug'
+    insertafter: "^[defaults]"
   become: True
 
 - name: Set up ansible logging
