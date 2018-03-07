@@ -45,6 +45,12 @@
     regexp: 'alias cc='
     line: "alias cc='cd \"$(pwd)\"'"
 
+- name: tmuxp autocomplete
+  lineinfile:
+    dest: ~/.bashrc
+    regexp: '^.*TMUX_COMPLETE.*' 
+    line: 'eval "$(_TMUXP_COMPLETE=source tmuxp)"'
+
 - name: Create or attach to tmux session
   lineinfile:
     dest: ~/.bashrc
