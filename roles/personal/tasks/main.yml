@@ -80,3 +80,16 @@
     name: guake
     state: present
   become: true
+
+- name: Ensure ~/.pip directory exists
+  file:
+    path: "~/.pip"
+    state: directory
+  become: False
+
+- name: Link pip.conf
+  file: 
+    src: "{{ role_path }}/files/pip.conf"
+    dest: "~/.pip/pip.conf"
+    state: link
+  become: False
