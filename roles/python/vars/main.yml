@@ -52,4 +52,4 @@ pip_packages:
   - flake8
   - pyyaml
   - tmuxp
-  - libtmux==0.7.7
+  - libtmux
