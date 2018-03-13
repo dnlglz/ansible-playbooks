@@ -5,8 +5,3 @@
     mode="o+rwx"
   become: True
 
-- name: Copy update script
-  template: 
-    src: "{{ role_path }}/files/update.j2"
-    dest: "/tmp/{{ update_script }}"
-  tags: ["test"]

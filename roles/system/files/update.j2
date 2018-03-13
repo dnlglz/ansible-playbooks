@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cd "{{ role_path }}/../.."
-git fetch --prune
-git merge --ff-only master origin/master
-"./{{ update_script }}"

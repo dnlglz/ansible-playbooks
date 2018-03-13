@@ -2,7 +2,7 @@
 - name: All roles
   hosts: localhost
   roles: 
-    - { role: system, tags: ['desktop', 'server'], update_script: "test2.sh" }
+    - { role: system, tags: ['desktop', 'server'] }
     - { role: utils, tags: ['desktop'] }
     - { role: python, tags: ['desktop','test'] }
     - { role: fun, tags: ['desktop'] }
