@@ -39,6 +39,7 @@ packages:
   - tree
   - undistract-me
   - xclip
+  - clipit
 
 packages_arch:
   - openssh
