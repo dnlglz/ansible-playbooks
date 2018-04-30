@@ -43,7 +43,6 @@ pip_packages:
   - sqlalchemy
   - beautifulsoup4
   - openpyxl
-  - gitsome
   - psycopg2-binary
   - pgcli
   - wharfee #docker cli
