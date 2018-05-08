@@ -40,6 +40,7 @@ packages:
   - undistract-me
   - xclip
   - clipit
+  - silversearcher-ag
 
 packages_arch:
   - openssh
