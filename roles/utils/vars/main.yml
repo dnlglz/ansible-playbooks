@@ -41,6 +41,7 @@ packages:
   - xclip
   - clipit
   - silversearcher-ag
+  - vim-gtk
 
 packages_arch:
   - openssh
