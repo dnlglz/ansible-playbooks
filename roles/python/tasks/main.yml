@@ -32,8 +32,6 @@
 
 - name: Ptipython config file
   file:
-    src={{ role_path }}/files/config.py
     dest={{ ansible_env.HOME }}/.ptpython/config.py
-    state=link
-    force=True
+    state=absent
   become: False
