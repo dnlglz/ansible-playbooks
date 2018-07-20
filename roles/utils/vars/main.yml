@@ -43,6 +43,7 @@ packages:
   - silversearcher-ag
   - vim-gtk
   - curl
+  - libimage-exiftool-perl
 
 packages_arch:
   - openssh
