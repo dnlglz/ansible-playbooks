@@ -44,3 +44,12 @@
     regexp: ".*undistract-me\\.sh.*"
     line: "source /etc/profile.d/undistract-me.sh"
   become: false
+
+- name: Install scripts
+  file: 
+    src="{{ item }}"
+    dest="/usr/local/bin/{{ item | basename }}"
+    state=link
+  with_fileglob: "{{ role_path }}/files/*.sh"
+  become: True
+
