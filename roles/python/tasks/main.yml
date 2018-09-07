@@ -23,6 +23,7 @@
     name={{ item }} state=latest executable=pip3
   with_items: "{{ pip_packages }}"
   become: True
+  ignore_errors: True
 
 - name: Ensure ptpython folder exists
   file:

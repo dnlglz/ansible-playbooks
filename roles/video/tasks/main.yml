@@ -27,6 +27,7 @@
     state=present
   with_items: "{{ packages }}"
   become: True
+  ignore_errors: True
 
 - name: Install scripts
   file: 
