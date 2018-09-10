@@ -11,11 +11,25 @@
       state: directory
   become: False
 
+- name: Remove old configuration
+  file:
+    path: "~/.vim/{{ item }}"
+    state: absent
+  with_items:
+    - "plugged"
+    - "README.md"
+    - ".gitignore"
+    - ".git"
+    - "script"
+    - "autoload"
+  become: False
+
 - name: Copy config files
   file:
       src: "{{ item }}"
       dest: "~/.vim/{{ item | basename }}"
       state: link
+      force: True
   with_fileglob: "{{ role_path }}/files/*"
   become: False
 
