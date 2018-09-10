@@ -22,6 +22,10 @@ packages:
 
 purge_pip_packages:
   - xonsh
+  - wharfee #docker cli
+  - pgcli
+  - watchdog
+  - ptipython
 
 pip_packages:
   - pip
@@ -43,13 +47,10 @@ pip_packages:
   - beautifulsoup4
   - openpyxl
   - psycopg2-binary
-  - pgcli
-  - wharfee #docker cli
   - pylint
   - invoke
   - flake8
   - pyyaml
   - tmuxp
   - libtmux
-  - watchdog
   - spyder
