@@ -1,0 +1,41 @@
+
+- name: Ensure .vim folder
+  file:
+      path: ~/.vim
+      state: directory
+  become: False
+
+- name: Ensure .vim plugin folder
+  file:
+      path: "~/.vim/pack/bundle/start/"
+      state: directory
+  become: False
+
+- name: Copy config files
+  file:
+      src: "{{ item }}"
+      dest: "~/.vim/{{ item | basename }}"
+      state: link
+  with_fileglob: "{{ role_path }}/files/*"
+  become: False
+
+- name: Install/update plugins
+  git: 
+      repo: 'https://github.com/{{ item  }}'
+      dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
+      update: True
+  with_items: "{{ plugins }}"
+  become: False
+
+- name: Intall fzf repo
+  git:
+    repo: 'https://github.com/junegunn/fzf.git'
+    dest: '~/.fzf'
+    update: True
+  register: fzf_result
+
+- name: Install fzf 
+  command: "~/.fzf/install --all"
+  become: False
+  when: "{{ fzf_result.changed }}"
+

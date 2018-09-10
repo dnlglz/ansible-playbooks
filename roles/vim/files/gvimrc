@@ -1,0 +1,23 @@
+
+" uncomment this to set a font
+" set guifont="Menlo Regular:h11"
+
+" no bell
+set noerrorbells
+
+" window size
+if exists(':win')
+    win 150 50
+endif
+
+" remove menu and toolbar. see help guioptions
+set guioptions=aegirlt
+
+" Show tab number
+set guitablabel=%N\ %f
+
+colo solarized
+
+nnoremap <silent> <C-S-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+nnoremap <silent> <C-S-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+nnoremap <silent> <C-S-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>

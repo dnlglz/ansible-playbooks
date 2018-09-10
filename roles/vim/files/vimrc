@@ -1,0 +1,145 @@
+" [ 0 ] VUNDLE {{{
+
+set nocompatible
+filetype off
+set rtp+=~/.fzf
+
+"}}} 
+
+" [ 1 ] THEME {{{
+
+if $TERM == "xterm-256color"
+set t_Co=256
+endif
+
+highlight LineNr ctermfg=grey
+
+syntax enable
+
+set background=dark
+let g:solarized_contrast="high"
+let g:solarized_visibility="low"
+let g:solarized_termcolors=256
+let html_use_css=1
+
+try
+colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+colorscheme slate 
+endtry
+
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+
+"}}}
+
+" [ 2 ] SETTINGS {{{ 
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set autochdir
+set autoindent
+set autoread
+set complete+=k
+set copyindent
+set cursorcolumn
+set cursorline
+set dictionary=~/.vimrc
+set encoding=utf-8
+set expandtab
+set foldmethod=marker
+set hidden
+set hlsearch
+set ignorecase
+set laststatus=2
+set list listchars=trail:·,tab:»·,eol:¬
+set nobackup
+set noshowmode
+set noswapfile
+set notimeout
+set nowrap
+set nowritebackup
+set nu
+set rnu
+set ruler
+set softtabstop=4
+set shell=/bin/sh
+set shiftround
+set shiftwidth=4
+set smartcase
+set smarttab
+set splitbelow splitright
+set tabstop=4
+set title
+set ttimeout
+set ttimeoutlen=100
+set ttyfast 
+set undodir=~/.vim/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
+set virtualedit=all
+set wildmenu wildmode=longest,list
+
+let g:AutoPairsShortcutFastWrap = '<C-e>'
+let g:AutoPairsShortcutToggle = '<C-j>'
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+
+"" Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"}}}
+
+" [ 3 ] MAPS {{{
+let mapleader=","
+
+inoremap <c-c> <Esc>
+
+map <leader>e :e $MYVIMRC<CR>
+map <space> <Plug>(easymotion-sn)
+map M-n <Plug>(easymotion-next)
+map M-N <Plug>(easymotion-prev)
+map ' `
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+map <Leader>b :Buffers<CR>
+map <Leader>f :Files<CR>
+
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+nmap <silent> <F3> :Lex<CR>
+nmap <silent> ,<space> :nohlsearch<CR>
+
+nnoremap <silent> <c-l> :SlimeSend1 <cr>
+nnoremap Q @
+nnoremap @ Q
+
+omap <space> <Plug>(easymotion-tn)
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+"}}}
+
+" [ 4 ] ABBREVIATIONS {{{
+iab _dt <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+iab _d <c-r>=strftime("%Y-%m-%d")<cr>
+iab _t <c-r>=strftime("%H:%M:%S")<cr>
+"}}}
+
+" [ 5 ] AUTOCMD {{{
+autocmd Filetype gitcommit setlocal textwidth=72
+" }}}
+
