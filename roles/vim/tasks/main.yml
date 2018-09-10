@@ -37,5 +37,5 @@
 - name: Install fzf 
   command: "~/.fzf/install --all"
   become: False
-  when: "{{ fzf_result.changed }}"
+  when: fzf_result.changed
 
