@@ -9,7 +9,6 @@ purge_packages:
   - python3-scipy
   - python3-seaborn
   - pylint
-  - spyder3
 
 packages:
   - ipython3
@@ -19,6 +18,8 @@ packages:
   - python3-tk
   - gfortran
   - virtualenv
+  - python3-spyder
+  - spyder3
 
 purge_pip_packages:
   - xonsh
@@ -26,6 +27,7 @@ purge_pip_packages:
   - pgcli
   - watchdog
   - ptipython
+  - spyder
 
 pip_packages:
   - pip
@@ -53,4 +55,3 @@ pip_packages:
   - pyyaml
   - tmuxp
   - libtmux
-  - spyder
