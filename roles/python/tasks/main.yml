@@ -2,6 +2,7 @@
   package: 
     name={{ item }} state=absent
   with_items: "{{ purge_packages }}"
+  ignore_errors: True
   become: True
 
 - name: Remove python packages via pip
@@ -10,6 +11,7 @@
     state: absent 
     executable: pip3
   with_items: "{{ purge_pip_packages }}"
+  ignore_errors: True
   become: True
 
 - name: Install python packages via apt
