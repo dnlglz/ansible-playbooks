@@ -5,3 +5,10 @@
     mode="o+rwx"
   become: True
 
+- name: Update system
+  apt: 
+    upgrade: True
+    update_cache: True
+    cache_valid_time: 86400 #a day
+  become: True
+
