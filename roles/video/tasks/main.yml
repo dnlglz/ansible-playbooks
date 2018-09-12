@@ -18,7 +18,7 @@
   apt_repository:
     repo={{ item }}
     state=present
-    codename="beaver"
+    codename="bionic"
   with_items: "{{ ppas }}"
   ignore_errors: True
   become: True
