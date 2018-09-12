@@ -13,12 +13,14 @@
     codename="sonya"
   with_items: "{{ ppas }}"
   become: True
+
 - name: Install ppas
   apt_repository:
     repo={{ item }}
     state=present
-    codename="xenial"
+    codename="beaver"
   with_items: "{{ ppas }}"
+  ignore_errors: True
   become: True
 
 - name: Install video packages
