@@ -48,7 +48,7 @@
 - name: tmuxp autocomplete
   lineinfile:
     dest: ~/.bashrc
-    regexp: '^.*TMUX_COMPLETE.*' 
+    regexp: '^.*TMUXP_COMPLETE.*' 
     line: 'eval "$(_TMUXP_COMPLETE=source tmuxp)"'
 
 - name: Create or attach to tmux session
