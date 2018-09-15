@@ -55,3 +55,4 @@ pip_packages:
   - pyyaml
   - tmuxp
   - libtmux
+  - bpsrender
