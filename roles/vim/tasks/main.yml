@@ -40,6 +40,7 @@
       update: True
   with_items: "{{ plugins }}"
   become: False
+  ignore_errors: True
 
 - name: Intall fzf repo
   git:
