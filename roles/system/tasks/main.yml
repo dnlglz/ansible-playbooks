@@ -7,8 +7,8 @@
 
 - name: Update system
   apt: 
-    upgrade: True
+    upgrade: safe
     update_cache: True
-    cache_valid_time: 86400 #a day
+    cache_valid_time: 0
   become: True
 
