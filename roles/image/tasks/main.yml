@@ -1,7 +1,7 @@
 - name: Install image packages
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
-  become: True
+  become: yes
 
 - name: install pencil from github
   git:
@@ -9,9 +9,9 @@
     # repo: "/tmp/pencil"
     dest: /var/repos/pencil
     umask: "000"
-  become: True
+  become: yes
   register: pencil_status
-  ignore_errors: True
+  ignore_errors: yes
 
 - debug: 
     var: pencil_status
@@ -21,11 +21,11 @@
     path: "/var/repos/pencil"
     state: latest
   when: pencil_status.changed == true
-  ignore_errors: True
+  ignore_errors: yes
 
 - name: Install script
   file: 
     src="{{ role_path }}/files/pencil"
     dest="/usr/local/bin/pencil"
     state=link
-  become: True
+  become: yes

@@ -3,12 +3,12 @@
     path="/var/repos"
     state="directory"
     mode="o+rwx"
-  become: True
+  become: yes
 
 - name: Update system
   apt: 
     upgrade: safe
-    update_cache: True
+    update_cache: yes
     cache_valid_time: 0
-  become: True
+  become: yes
 

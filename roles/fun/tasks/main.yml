@@ -3,13 +3,13 @@
     repo: "{{ item }}"
     state: "present"
     codename: "xenial"
-    update_cache: True
+    update_cache: yes
   with_items: "{{ ppas }}"
-  become: True
+  become: yes
 
 - name: Install fun packages
   package: 
     name: "{{ item }}" 
     state: present
   with_items: "{{ packages }}"
-  become: True
+  become: yes

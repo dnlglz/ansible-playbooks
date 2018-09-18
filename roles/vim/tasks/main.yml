@@ -3,13 +3,13 @@
   file:
       path: ~/.vim
       state: directory
-  become: False
+  become: no
 
 - name: Ensure .vim plugin folder
   file:
       path: "~/.vim/pack/bundle/start/"
       state: directory
-  become: False
+  become: no
 
 - name: Remove old configuration
   file:
@@ -22,35 +22,35 @@
     - ".git"
     - "script"
     - "autoload"
-  become: False
+  become: no
 
 - name: Copy config files
   file:
       src: "{{ item }}"
       dest: "~/.vim/{{ item | basename }}"
       state: link
-      force: True
+      force: yes
   with_fileglob: "{{ role_path }}/files/*"
-  become: False
+  become: no
 
 - name: Install/update plugins
   git: 
       repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
-      update: True
+      update: yes
   with_items: "{{ plugins }}"
-  become: False
-  ignore_errors: True
+  become: no
+  ignore_errors: yes
 
 - name: Intall fzf repo
   git:
     repo: 'https://github.com/junegunn/fzf.git'
     dest: '~/.fzf'
-    update: True
+    update: yes
   register: fzf_result
 
 - name: Install fzf 
   command: "~/.fzf/install --all"
-  become: False
+  become: no
   when: fzf_result.changed
 

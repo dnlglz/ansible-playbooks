@@ -1,18 +1,18 @@
 - name: Install util packages
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
-  become: True
+  become: yes
 
 - name: Install util packages for arch family
   pacman: name={{ item }} state=present
   with_items: "{{ packages_arch }}"
-  become: True
+  become: yes
   when: ansible_pkg_mgr == "pacman"
 
 - name: Install util packages for debian family
   apt: name={{ item }} state=present
   with_items: "{{ packages_debian }}"
-  become: True
+  become: yes
   when: ansible_pkg_mgr == "apt"
 
 - name: Create ansible log file
@@ -21,7 +21,7 @@
     content: ""
     force: no
     mode: 0666
-  become: True
+  become: yes
 
 - name: Set up ansible debug mode
   lineinfile:
@@ -29,14 +29,14 @@
     regexp: '^stdout_callback = debug'
     line: 'stdout_callback = debug'
     insertafter: "^[defaults]"
-  become: True
+  become: yes
 
 - name: Set up ansible logging
   lineinfile:
     dest: "/etc/ansible/ansible.cfg"
     regexp: '^#?log_path'
     line: 'log_path = /var/log/ansible.log'
-  become: True
+  become: yes
 
 - name: Activate undistract-me
   lineinfile:
@@ -51,5 +51,5 @@
     dest="/usr/local/bin/{{ item | basename }}"
     state=link
   with_fileglob: "{{ role_path }}/files/*.sh"
-  become: True
+  become: yes
 

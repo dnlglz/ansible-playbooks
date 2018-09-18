@@ -3,35 +3,35 @@
     name: user.name
     scope: global
     value: "{{ git_name }}"
-  become: False
+  become: no
 
 - name: Set git email 
   git_config:
     name: user.email
     scope: global
     value: "{{ git_email }}"
-  become: False
+  become: no
 
 - name: Set git default push
   git_config:
     name: push.default
     scope: global
     value: "matching"
-  become: False
+  become: no
   
 - name: Set git default editor
   git_config:
     name: core.editor
     scope: global
     value: vim
-  become: False
+  become: no
 
 - name: Set git color ui
   git_config:
     name: color.ui
     scope: global
     value: auto
-  become: False
+  become: no
 
 - name: Set vim as default editor
   lineinfile:
@@ -85,11 +85,11 @@
   file:
     path: "~/.pip"
     state: directory
-  become: False
+  become: no
 
 - name: Link pip.conf
   file: 
     src: "{{ role_path }}/files/pip.conf"
     dest: "~/.pip/pip.conf"
     state: link
-  become: False
+  become: no

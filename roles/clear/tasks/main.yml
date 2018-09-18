@@ -1,4 +1,4 @@
 - name: Remove packages
   package: name={{ item }} state=absent
   with_items: "{{ packages }}"
-  become: True
+  become: yes

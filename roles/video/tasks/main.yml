@@ -4,7 +4,7 @@
     state=absent
     codename="sylvia"
   with_items: "{{ ppas }}"
-  become: True
+  become: yes
 
 - name: Remove sonya obs wrong repo
   apt_repository:
@@ -12,7 +12,7 @@
     state=absent
     codename="sonya"
   with_items: "{{ ppas }}"
-  become: True
+  become: yes
 
 - name: Install ppas
   apt_repository:
@@ -20,16 +20,16 @@
     state=present
     codename="bionic"
   with_items: "{{ ppas }}"
-  ignore_errors: True
-  become: True
+  ignore_errors: yes
+  become: yes
 
 - name: Install video packages
   package: 
     name={{ item }} 
     state=present
   with_items: "{{ packages }}"
-  become: True
-  ignore_errors: True
+  become: yes
+  ignore_errors: yes
 
 - name: Install scripts
   file: 
@@ -37,7 +37,7 @@
     dest="/usr/local/bin/{{ item }}"
     state=link
   with_items: "{{ scripts }}"
-  become: True
+  become: yes
 
 - name: Clone pulverize repo
   git: 
@@ -49,4 +49,4 @@
     src="/var/repos/pulverize/pulverize.php"
     dest="/usr/local/bin/pulverize.php"
     state="link"
-  become: True
+  become: yes

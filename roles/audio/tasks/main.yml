@@ -1,4 +1,4 @@
 - name: Install audio packages
   package: name={{ item }} state=present
   with_items: "{{ packages }}"
-  become: True
+  become: yes
