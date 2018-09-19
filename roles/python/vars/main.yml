@@ -20,6 +20,7 @@ packages:
   - virtualenv
   - python3-spyder
   - spyder3
+  - libfreetype6-dev # for matplotlib
 
 purge_pip_packages:
   - xonsh
