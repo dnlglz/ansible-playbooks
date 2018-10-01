@@ -29,6 +29,7 @@ purge_pip_packages:
   - watchdog
   - ptipython
   - spyder
+  - gitsome
 
 pip_packages:
   - pip
