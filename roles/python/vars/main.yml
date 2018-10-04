@@ -58,3 +58,4 @@ pip_packages:
   - tmuxp
   - libtmux
   - bpsrender
+  - ansible
