@@ -2,6 +2,7 @@
 
 packages:
   - apg  #random password generator
+  - jq
   - at
   - bmon
   - build-essential
