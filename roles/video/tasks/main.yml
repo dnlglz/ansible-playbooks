@@ -25,9 +25,8 @@
 
 - name: Install video packages
   package: 
-    name={{ item }} 
-    state=present
-  with_items: "{{ packages }}"
+    name: "{{ packages }}"
+    state: present
   become: yes
   ignore_errors: yes
 

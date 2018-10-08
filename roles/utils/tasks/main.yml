@@ -1,17 +1,20 @@
 - name: Install util packages
-  package: name={{ item }} state=present
-  with_items: "{{ packages }}"
+  package: 
+    name: "{{ packages }}"
+    state: present
   become: yes
 
 - name: Install util packages for arch family
-  pacman: name={{ item }} state=present
-  with_items: "{{ packages_arch }}"
+  pacman: 
+    name: "{{ packages_arch }}"
+    state: present
   become: yes
   when: ansible_pkg_mgr == "pacman"
 
 - name: Install util packages for debian family
-  apt: name={{ item }} state=present
-  with_items: "{{ packages_debian }}"
+  apt: 
+    name: "{{ packages_debian }}" 
+    state: present
   become: yes
   when: ansible_pkg_mgr == "apt"
 

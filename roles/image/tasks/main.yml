@@ -1,6 +1,7 @@
 - name: Install image packages
-  package: name={{ item }} state=present
-  with_items: "{{ packages }}"
+  package: 
+    name: "{{ packages }}" 
+    state: present
   become: yes
 
 - name: install pencil from github

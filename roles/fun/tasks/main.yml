@@ -9,7 +9,6 @@
 
 - name: Install fun packages
   package: 
-    name: "{{ item }}" 
+    name: "{{ packages }}" 
     state: present
-  with_items: "{{ packages }}"
   become: yes

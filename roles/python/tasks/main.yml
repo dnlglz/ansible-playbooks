@@ -1,30 +1,30 @@
 - name: Purge python packages via apt
   package: 
-    name={{ item }} state=absent
-  with_items: "{{ purge_packages }}"
+    name: "{{ purge_packages }}" 
+    state: absent
   ignore_errors: yes
   become: yes
 
 - name: Remove python packages via pip
   pip:
-    name: "{{ item }}" 
+    name: "{{ purge_pip_packages }}" 
     state: absent 
     executable: pip3
-  with_items: "{{ purge_pip_packages }}"
   ignore_errors: yes
   become: yes
 
 - name: Install python packages via apt
   package: 
-    name={{ item }} state=present
-  with_items: "{{ packages }}"
+    name: "{{ packages }}"
+    state: present
   ignore_errors: yes
   become: yes
 
 - name: Install python packages via pip
   pip:
-    name={{ item }} state=latest executable=pip3
-  with_items: "{{ pip_packages }}"
+    name: "{{ pip_packages }}"
+    state: latest 
+    executable: pip3
   become: yes
   ignore_errors: yes
 
