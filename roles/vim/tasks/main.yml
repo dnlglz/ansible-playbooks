@@ -33,6 +33,18 @@
   with_fileglob: "{{ role_path }}/files/*"
   become: no
 
+- shell: ls -1 ~/.vim/pack/bundle/start/
+  register: installed_plugins
+  become: no
+
+- name: Remove unused plugins
+  file:
+    path: "~/.vim/pack/bundle/start/{{ item }}"
+    state: absent
+  with_items: "{{ installed_plugins.stdout_lines }}"
+  when: item not in plugins | map('basename')
+  become: no
+
 - name: Install/update plugins
   git: 
       repo: 'https://github.com/{{ item  }}'
