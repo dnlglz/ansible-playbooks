@@ -50,9 +50,12 @@
       repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
       update: yes
+      recursive: no
+      depth: 1
   with_items: "{{ plugins }}"
   become: no
   ignore_errors: yes
+  tags: test
 
 - name: Intall fzf repo
   git:
