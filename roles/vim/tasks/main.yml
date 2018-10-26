@@ -55,7 +55,6 @@
   with_items: "{{ plugins }}"
   become: no
   ignore_errors: yes
-  tags: test
 
 - name: Intall fzf repo
   git:
