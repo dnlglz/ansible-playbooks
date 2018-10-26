@@ -30,6 +30,7 @@ purge_pip_packages:
   - ptipython
   - spyder
   - gitsome
+  - tmuxp
 
 pip_packages:
   - pip
@@ -55,7 +56,6 @@ pip_packages:
   - invoke
   - flake8
   - pyyaml
-  - tmuxp
   - libtmux
   - bpsrender
   - ansible
