@@ -36,6 +36,7 @@
 - shell: ls -1 ~/.vim/pack/bundle/start/
   register: installed_plugins
   become: no
+  changed_when: False
 
 - name: Remove unused plugins
   file:
