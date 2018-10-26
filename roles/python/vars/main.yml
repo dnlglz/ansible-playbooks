@@ -66,3 +66,4 @@ pip_packages:
   - libtmux
   - bpsrender
   - ansible
+  - pycairo

@@ -13,18 +13,30 @@
   ignore_errors: yes
   become: yes
 
+- name: pycairo dependencies
+  package:
+    name: "{{ item }}"
+  ignore_errors: yes
+  become: yes
+  with_items:
+    - libcairo2-dev
+    - libgirepository1.0-dev
+  tags: test
+
 - name: Install python packages via apt
   package: 
     name: "{{ packages }}"
-    state: present
+    state: latest
   ignore_errors: yes
   become: yes
+  tags: test
 
 - name: Install python packages via pip
   pip:
     name: "{{ pip_packages }}"
     state: latest 
     executable: pip3
+    extra_args: --ignore-installed
   become: yes
   ignore_errors: yes
 
