@@ -45,6 +45,7 @@ packages:
   - vim-gtk
   - curl
   - libimage-exiftool-perl
+  - geany
 
 packages_arch:
   - openssh
