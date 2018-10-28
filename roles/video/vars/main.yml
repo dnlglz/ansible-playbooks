@@ -6,7 +6,6 @@ packages:
   - blender
   - ffmpeg
   - obs-studio  # if remove this, remove also his ppa
-  - php #for pulverize repository
   - smplayer
   - vlc
 

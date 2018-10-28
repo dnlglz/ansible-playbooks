@@ -38,14 +38,14 @@
   with_items: "{{ scripts }}"
   become: yes
 
-- name: Clone pulverize repo
-  git: 
-    repo="https://github.com/sciactive/pulverize"
-    dest="/var/repos/pulverize"
+- name: Remove pulverize repo
+  file: 
+    path: "/var/repos/pulverize"
+    state: absent
+  become: yes
     
-- name: Link pulverize.php into /usr/local/bin
+- name: Remove pulverize link
   file:
-    src="/var/repos/pulverize/pulverize.php"
-    dest="/usr/local/bin/pulverize.php"
-    state="link"
+    path: "/usr/local/bin/pulverize.php"
+    state: absent
   become: yes
