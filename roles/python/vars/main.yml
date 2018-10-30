@@ -33,6 +33,13 @@ purge_pip_packages:
   - tmuxp
 
 pip_packages:
+  - ipython
+  - keyring
+  - pytz
+  - python-dateutil
+  - setuptools
+  - youtube-dl
+  - patsy
   - pip
   - pandas
   - numpy
