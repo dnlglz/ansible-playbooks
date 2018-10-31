@@ -33,6 +33,7 @@
     line: 'stdout_callback = debug'
     insertafter: "^[defaults]"
   become: yes
+  ignore_errors: yes
 
 - name: Set up ansible logging
   lineinfile:
@@ -40,6 +41,7 @@
     regexp: '^#?log_path'
     line: 'log_path = /var/log/ansible.log'
   become: yes
+  ignore_errors: yes
 
 - name: Activate undistract-me
   lineinfile:
