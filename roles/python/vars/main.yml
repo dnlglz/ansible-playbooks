@@ -9,6 +9,8 @@ purge_packages:
   - python3-scipy
   - python3-seaborn
   - pylint
+  - python3-spyder
+  - spyder3
 
 packages:
   - ipython3
@@ -18,8 +20,6 @@ packages:
   - python3-tk
   - gfortran
   - virtualenv
-  - python3-spyder
-  - spyder3
   - libfreetype6-dev # for matplotlib
 
 purge_pip_packages:
@@ -28,11 +28,11 @@ purge_pip_packages:
   - pgcli
   - watchdog
   - ptipython
-  - spyder
   - gitsome
   - tmuxp
 
 pip_packages:
+  - spyder
   - ipython
   - keyring
   - pytz
