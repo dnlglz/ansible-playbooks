@@ -21,6 +21,12 @@ packages:
   - gfortran
   - virtualenv
   - libfreetype6-dev # for matplotlib
+  - libicu-dev # for PyICU
+  - libssl-dev # for pycurl
+  - libcurl4-openssl-dev # for pycurl
+  - python-dev # for pycurl
+  - libcairo2-dev # for pycairo
+  - libgirepository1.0-dev # for pycairo
 
 purge_pip_packages:
   - xonsh

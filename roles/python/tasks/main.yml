@@ -13,16 +13,6 @@
   ignore_errors: yes
   become: yes
 
-- name: pycairo dependencies
-  package:
-    name: "{{ item }}"
-  ignore_errors: yes
-  become: yes
-  with_items:
-    - libcairo2-dev
-    - libgirepository1.0-dev
-  tags: test
-
 - name: Install python packages via apt
   package: 
     name: "{{ packages }}"
@@ -39,15 +29,16 @@
     extra_args: --ignore-installed
   become: yes
   ignore_errors: yes
+  tags: test
 
 - name: Ensure ptpython folder exists
   file:
-    dest={{ ansible_env.HOME }}/.ptpython/
-    state=directory
+    dest: "{{ ansible_env.HOME }}/.ptpython/"
+    state: directory
   become: no
 
 - name: Ptipython config file
   file:
-    dest={{ ansible_env.HOME }}/.ptpython/config.py
-    state=absent
+    dest: "{{ ansible_env.HOME }}/.ptpython/config.py"
+    state: absent
   become: no
