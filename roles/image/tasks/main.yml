@@ -4,29 +4,17 @@
     state: present
   become: yes
 
-- name: install pencil from github
-  git:
-    repo: https://github.com/evolus/pencil
-    # repo: "/tmp/pencil"
-    dest: /var/repos/pencil
-    umask: "000"
-  become: yes
-  register: pencil_status
-  ignore_errors: yes
-
-- debug: 
-    var: pencil_status
-
-- name: Install npm dependencies
-  npm:
+- name: Remove pencil folder
+  file:
     path: "/var/repos/pencil"
-    state: latest
-  when: pencil_status.changed == true
-  ignore_errors: yes
-
-- name: Install script
-  file: 
-    src="{{ role_path }}/files/pencil"
-    dest="/usr/local/bin/pencil"
-    state=link
+    state: absent
   become: yes
+  tags: test
+
+
+- name: Remove pencil link
+  file: 
+    path: "/usr/local/bin/pencil"
+    state: absent
+  become: yes
+  tags: test

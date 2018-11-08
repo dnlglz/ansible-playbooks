@@ -19,7 +19,6 @@
     state: latest
   ignore_errors: yes
   become: yes
-  tags: test
 
 - name: Install python packages via pip
   pip:
@@ -29,7 +28,6 @@
     extra_args: --ignore-installed
   become: yes
   ignore_errors: yes
-  tags: test
 
 - name: Ensure ptpython folder exists
   file:
