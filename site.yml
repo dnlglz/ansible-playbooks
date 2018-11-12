@@ -3,7 +3,7 @@
   hosts: localhost
   roles: 
     - { role: system, tags: ['desktop', 'server'] }
-    - { role: vim, tags: ['desktop'] }
+    - { role: vim, tags: ['desktop', 'vim'] }
     - { role: utils, tags: ['desktop'] }
     - { role: python, tags: ['desktop'] }
     - { role: fun, tags: ['desktop'] }
