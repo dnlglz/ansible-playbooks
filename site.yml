@@ -2,15 +2,15 @@
 - name: All roles
   hosts: localhost
   roles: 
-    - { role: system, tags: ['desktop', 'server'] }
-    - { role: vim, tags: ['desktop', 'vim'] }
-    - { role: utils, tags: ['desktop'] }
-    - { role: python, tags: ['desktop'] }
-    - { role: fun, tags: ['desktop'] }
-    - { role: personal, tags: ['desktop']  }
-    - { role: docker, tags: ['desktop', 'server']  }
-    - { role: tmux, tags: ['desktop', 'server']  }
-    - { role: image, tags: ['desktop']  }
-    - { role: audio, tags: ['desktop']  }
+    - { role: system, tags: ['desktop', 'server', 'raspberry'] }
+    - { role: vim, tags: ['desktop', 'vim', 'raspberry'] }
+    - { role: utils, tags: ['desktop', 'raspberry'] }
+    - { role: python, tags: ['desktop', 'raspberry'] }
+    - { role: fun, tags: ['desktop', 'raspberry'] }
+    - { role: personal, tags: ['desktop', 'raspberry']  }
+    - { role: docker, tags: ['desktop', 'server', 'raspberry']  }
+    - { role: tmux, tags: ['desktop', 'server', 'raspberry']  }
+    - { role: image, tags: ['desktop', 'raspberry']  }
+    - { role: audio, tags: ['desktop', 'raspberry']  }
     - { role: video, tags: ['desktop'] }
     - { role: clear, tags: ['desktop'] }
