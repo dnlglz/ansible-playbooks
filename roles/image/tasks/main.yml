@@ -9,7 +9,6 @@
     path: "/var/repos/pencil"
     state: absent
   become: yes
-  tags: test
 
 
 - name: Remove pencil link
@@ -17,4 +16,3 @@
     path: "/usr/local/bin/pencil"
     state: absent
   become: yes
-  tags: test
