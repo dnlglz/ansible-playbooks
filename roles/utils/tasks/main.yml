@@ -5,6 +5,7 @@
     global: yes
     state: latest
   become: yes
+  ignore_errors: yes
 
 - name: Install util packages
   package: 
