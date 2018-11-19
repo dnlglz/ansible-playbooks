@@ -6,9 +6,11 @@
     update_cache: yes
   with_items: "{{ ppas }}"
   become: yes
+  ignore_errors: yes
 
 - name: Install fun packages
   package: 
     name: "{{ packages }}" 
     state: present
   become: yes
+  ignore_errors: yes
