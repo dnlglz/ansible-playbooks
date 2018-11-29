@@ -38,7 +38,7 @@ purge_pip_packages:
   - tmuxp
 
 pip_packages:
-  - spyder
+  - httpie
   - ipython
   - keyring
   - pytz
