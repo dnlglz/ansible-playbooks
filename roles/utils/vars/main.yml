@@ -1,6 +1,8 @@
 ---
 
 packages:
+  - nodejs
+  - npm
   - apg  #random password generator
   - jq
   - at
