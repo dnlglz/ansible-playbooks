@@ -64,11 +64,12 @@
     regexp: 'shopt -s autocd'
     line: 'shopt -s autocd'
 
-- name: Show screenfetch on new terminal
+- name: Remove screenfetch
   lineinfile:
     dest: ~/.bashrc
     regexp: '^.*then screenfetch.*$'
     line: 'if [ -f /usr/bin/screenfetch ]; then screenfetch; fi'
+    state: absent
 
 - name: Prettier log
   git_config:

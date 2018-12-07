@@ -30,7 +30,6 @@ packages:
   - renameutils
   - ranger
   - rsync
-  - screenfetch
   - task-spooler
   - texlive-fonts-recommended #for pandoc to pdf
   - tig
