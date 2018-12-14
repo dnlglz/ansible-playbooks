@@ -38,6 +38,7 @@ purge_pip_packages:
   - tmuxp
 
 pip_packages:
+  - yq
   - httpie
   - ipython
   - keyring
