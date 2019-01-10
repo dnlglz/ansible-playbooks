@@ -12,12 +12,6 @@
   become: yes
   when: ansible_pkg_mgr == "pacman"
 
-- name: Install docker packages for all families
-  package: 
-    name: "{{ packages_common }}"
-    state: present
-  become: yes
-
 - name: Add current user to docker group
   user: 
     name: "{{ ansible_env.USER }}"

@@ -74,3 +74,4 @@ pip_packages:
   - bpsrender
   - ansible
   - pycairo
+  - docker-compose

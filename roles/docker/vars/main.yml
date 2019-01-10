@@ -5,6 +5,3 @@ packages_arch:
 
 packages_debian:
   - docker.io
-
-packages_common:
-  - docker-compose
