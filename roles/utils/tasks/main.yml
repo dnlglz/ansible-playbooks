@@ -1,12 +1,4 @@
 
-- name: Install dockly
-  npm:
-    name: dockly
-    global: yes
-    state: latest
-  become: yes
-  ignore_errors: yes
-
 - name: Install util packages
   package: 
     name: "{{ packages }}"
