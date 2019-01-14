@@ -27,6 +27,7 @@ packages:
   - python-dev # for pycurl
   - libcairo2-dev # for pycairo
   - libgirepository1.0-dev # for pycairo
+  - docker-compose
 
 purge_pip_packages:
   - xonsh
@@ -74,4 +75,3 @@ pip_packages:
   - bpsrender
   - ansible
   - pycairo
-  - docker-compose
