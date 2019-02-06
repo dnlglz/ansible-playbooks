@@ -45,6 +45,7 @@ packages:
   - curl
   - libimage-exiftool-perl
   - geany
+  - pwgen
 
 packages_arch:
   - openssh
