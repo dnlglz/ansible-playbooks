@@ -1,6 +1,7 @@
 ---
 
 plugins: 
+    - 'tpope/vim-dispatch' # run external commands asyncronously
     - 'Lokaltog/vim-easymotion'
     - 'airblade/vim-gitgutter'
     - 'altercation/vim-colors-solarized'
