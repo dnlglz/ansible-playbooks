@@ -47,7 +47,7 @@
   become: no
 
 - name: Install/update plugins
-  git: 
+  git:
       repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
       update: yes
@@ -64,7 +64,7 @@
     update: yes
   register: fzf_result
 
-- name: Install fzf 
+- name: Install fzf
   command: "~/.fzf/install --all"
   become: no
   when: fzf_result.changed

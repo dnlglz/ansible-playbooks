@@ -1,7 +1,7 @@
 ---
 - name: All roles
   hosts: localhost
-  roles: 
+  roles:
     - { role: system, tags: ['desktop', 'server', 'raspberry'] }
     - { role: vim, tags: ['desktop', 'vim', 'raspberry'] }
     - { role: utils, tags: ['desktop', 'raspberry'] }

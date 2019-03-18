@@ -1,11 +1,11 @@
-- name: Set git name 
+- name: Set git name
   git_config:
     name: user.name
     scope: global
     value: "{{ git_name }}"
   become: no
 
-- name: Set git email 
+- name: Set git email
   git_config:
     name: user.email
     scope: global
@@ -18,7 +18,7 @@
     scope: global
     value: "matching"
   become: no
-  
+
 - name: Set git default editor
   git_config:
     name: core.editor
@@ -48,7 +48,7 @@
 - name: Remove tmuxp autocomplete
   lineinfile:
     dest: ~/.bashrc
-    regexp: '^.*TMUXP_COMPLETE.*' 
+    regexp: '^.*TMUXP_COMPLETE.*'
     line: 'eval "$(_TMUXP_COMPLETE=source tmuxp)"'
     state: absent
 
@@ -90,7 +90,7 @@
   become: no
 
 - name: Link pip.conf
-  file: 
+  file:
     src: "{{ role_path }}/files/pip.conf"
     dest: "~/.pip/pip.conf"
     state: link
