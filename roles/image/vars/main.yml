@@ -1,8 +1,6 @@
 ---
 packages:
-  - equalx
   - inkscape
   - gimp
-  - gimp-resynthesizer
   - krita
   - dia

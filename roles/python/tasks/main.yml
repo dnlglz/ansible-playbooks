@@ -1,29 +1,31 @@
 - name: Purge python packages via apt
-  package: 
-    name: "{{ purge_packages }}" 
+  package:
+    name: "{{ purge_packages }}"
     state: absent
   ignore_errors: yes
   become: yes
+  when: ansible_pkg_mgr=="apt"
 
 - name: Remove python packages via pip
   pip:
-    name: "{{ purge_pip_packages }}" 
-    state: absent 
+    name: "{{ purge_pip_packages }}"
+    state: absent
     executable: pip3
   ignore_errors: yes
   become: yes
 
 - name: Install python packages via apt
-  package: 
+  package:
     name: "{{ packages }}"
     state: latest
   ignore_errors: yes
   become: yes
+  when: ansible_pkg_mgr=="apt"
 
 - name: Install python packages via pip
   pip:
     name: "{{ pip_packages }}"
-    state: latest 
+    state: latest
     executable: pip3
     extra_args: --ignore-installed
   become: yes
