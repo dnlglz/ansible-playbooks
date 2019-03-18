@@ -1,20 +1,22 @@
 
 - name: Install util packages
-  package: 
+  package:
     name: "{{ packages }}"
     state: present
   become: yes
+  tags: test
 
 - name: Install util packages for arch family
-  pacman: 
+  pacman:
     name: "{{ packages_arch }}"
     state: present
   become: yes
   when: ansible_pkg_mgr == "pacman"
+  tags: test
 
 - name: Install util packages for debian family
-  apt: 
-    name: "{{ packages_debian }}" 
+  apt:
+    name: "{{ packages_debian }}"
     state: present
   become: yes
   when: ansible_pkg_mgr == "apt"
@@ -52,7 +54,7 @@
   become: false
 
 - name: Install scripts
-  file: 
+  file:
     src="{{ item }}"
     dest="/usr/local/bin/{{ item | basename }}"
     state=link

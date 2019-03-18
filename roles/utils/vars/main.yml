@@ -1,15 +1,11 @@
 ---
 
 packages:
-  - apg  #random password generator
   - jq
   - at
   - bmon
-  - build-essential
-  - byobu #For remove-old-kernels
   - cloc  #Count lines of code
   - git
-  - git-extras
   - gnupg
   - gparted
   - htop
@@ -20,30 +16,23 @@ packages:
   - most
   - mtr
   - multitail
-  - ncdu 
+  - ncdu
   - openssl
   - pandoc
   - preload
   - pv
   - pydf
-  - qalc
   - renameutils
   - ranger
   - rsync
   - task-spooler
-  - texlive-fonts-recommended #for pandoc to pdf
   - tig
   - tlp
-  - tlp-rdw
   - tmux
   - tree
-  - undistract-me
   - xclip
   - clipit
-  - silversearcher-ag
-  - vim-gtk
   - curl
-  - libimage-exiftool-perl
   - geany
   - pwgen
 
@@ -53,6 +42,16 @@ packages_arch:
 
 packages_debian:
   - anacron
-  - aptitude 
+  - apg  #random password generator
+  - aptitude
   - openssh-client
   - openssh-server
+  - texlive-fonts-recommended #for pandoc to pdf
+  - build-essential
+  - git-extras
+  - libimage-exiftool-perl
+  - silversearcher-ag
+  - tlp-rdw
+  - undistract-me
+  - vim-gtk
+  - byobu #For remove-old-kernels
