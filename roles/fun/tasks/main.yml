@@ -1,14 +1,3 @@
-- name: Ensure ppas are installed
-  apt_repository:
-    repo: "{{ item }}"
-    state: "present"
-    codename: "xenial"
-    update_cache: yes
-  with_items: "{{ ppas }}"
-  become: yes
-  ignore_errors: yes
-  when: ansible_pkg_mgr=="apt"
-
 - name: Install fun packages
   package:
     name: "{{ packages }}"
