@@ -5,10 +5,20 @@
     mode="o+rwx"
   become: yes
 
-- name: Update system
-  apt: 
+- name: Update debian family system
+  apt:
     upgrade: safe
     update_cache: yes
     cache_valid_time: 0
   become: yes
+  when: ansible_os_family=="Debian"
+  tags: test
+
+- name: Update arch family system
+  pacman:
+    upgrade: yes
+    update_cache: yes
+  become: yes
+  when: ansible_os_family=="Archlinux"
+  tags: test
 
