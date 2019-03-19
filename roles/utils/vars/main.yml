@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - certbot
   - jq
   - at
   - bmon
