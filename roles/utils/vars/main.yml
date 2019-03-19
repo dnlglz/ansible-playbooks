@@ -35,6 +35,7 @@ packages:
   - curl
   - geany
   - pwgen
+  - inotify-tools
 
 packages_arch:
   - openssh
