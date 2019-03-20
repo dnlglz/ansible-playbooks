@@ -30,6 +30,7 @@ packages:
   - tig
   - tlp
   - tmux
+  - tmuxp
   - tree
   - xclip
   - clipit
