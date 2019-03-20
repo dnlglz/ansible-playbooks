@@ -3,6 +3,7 @@
   hosts: localhost
   roles:
     - { role: system, tags: ['desktop', 'server', 'raspberry'] }
+    - { role: arch, tags: ['desktop'] }
     - { role: vim, tags: ['desktop', 'vim', 'raspberry'] }
     - { role: utils, tags: ['desktop', 'raspberry'] }
     - { role: python, tags: ['desktop'] }

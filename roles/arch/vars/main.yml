@@ -1,0 +1,7 @@
+
+---
+
+base_packages:
+  - go
+  - base-devel
+  - git

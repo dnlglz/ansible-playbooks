@@ -1,0 +1,9 @@
+
+- name: Ensure base software is installed
+  pacman:
+    name: "{{ base_packages }}"
+    state: present
+  become: yes
+  when: ansible_os_family=="Archlinux"
+  tags: test
+
