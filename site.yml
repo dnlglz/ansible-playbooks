@@ -15,3 +15,4 @@
     - { role: audio, tags: ['desktop', 'raspberry']  }
     - { role: video, tags: ['desktop'] }
     - { role: clear, tags: ['desktop'] }
+    - { role: debug, tags: ['test'] }
