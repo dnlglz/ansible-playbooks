@@ -42,6 +42,7 @@ packages:
 packages_arch:
   - openssh
   - cronie
+  - keepassxc
 
 packages_debian:
   - anacron
