@@ -43,6 +43,7 @@ packages_arch:
   - openssh
   - cronie
   - keepassxc
+  - perl-rename
 
 packages_debian:
   - anacron
