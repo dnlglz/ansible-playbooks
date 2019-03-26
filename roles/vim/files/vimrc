@@ -143,5 +143,9 @@ iab _t <c-r>=strftime("%H:%M:%S")<cr>
 
 " [ 5 ] AUTOCMD {{{
 autocmd Filetype gitcommit setlocal textwidth=72
+augroup RemoveTrailingWSOnWrite
+    autocmd!
+    autocmd BufWritePre * :execute "normal mc" | :%s/\s\+$//e | :normal `c
+augroup END
 " }}}
 
