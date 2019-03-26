@@ -1,6 +1,7 @@
 ---
 
 plugins:
+  - 'mtth/scratch.vim'
   - 'Shougo/deoplete.nvim'
   - 'roxma/nvim-yarp'
   - 'roxma/vim-hug-neovim-rpc'
