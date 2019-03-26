@@ -30,7 +30,6 @@ packages:
   - tig
   - tlp
   - tmux
-  - tmuxp
   - tree
   - xclip
   - clipit
@@ -44,6 +43,7 @@ packages_arch:
   - cronie
   - keepassxc
   - perl-rename
+  - tmuxp
 
 packages_debian:
   - anacron
