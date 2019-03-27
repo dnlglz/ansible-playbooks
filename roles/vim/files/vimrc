@@ -4,7 +4,7 @@ set nocompatible
 filetype off
 set rtp+=~/.fzf
 
-"}}} 
+"}}}
 
 " [ 1 ] THEME {{{
 
@@ -25,7 +25,7 @@ let html_use_css=1
 try
 colorscheme solarized
 catch /^Vim\%((\a\+)\)\=:E185/
-colorscheme slate 
+colorscheme slate
 endtry
 
 highlight Normal ctermbg=NONE
@@ -33,7 +33,7 @@ highlight nonText ctermbg=NONE
 
 "}}}
 
-" [ 2 ] SETTINGS {{{ 
+" [ 2 ] SETTINGS {{{
 
 filetype on
 filetype plugin on
@@ -75,7 +75,7 @@ set tabstop=4
 set title
 set ttimeout
 set ttimeoutlen=100
-set ttyfast 
+set ttyfast
 set undodir=~/.vim/undo
 set undofile
 set undolevels=1000
@@ -84,7 +84,7 @@ set virtualedit=all
 set wildmenu wildmode=longest,list
 
 let g:AutoPairsShortcutFastWrap = '<C-e>'
-let g:AutoPairsShortcutToggle = '<C-j>'
+let g:AutoPairsShortcutToggle = '<C-h>'
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 let g:netrw_liststyle=3
@@ -132,6 +132,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "}}}
 
