@@ -1,1 +1,2 @@
 filetype * xdg-open %c > /dev/null &
+nnoremap w :view<cr>
