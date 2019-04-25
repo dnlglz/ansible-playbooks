@@ -119,6 +119,7 @@ map <Leader>b :Buffers<CR>
 map <Leader>f :Files<CR>
 map <Leader>m :Marks<CR>
 map <Leader>t :Tags<CR>
+map <Leader>r :w !bash<cr>
 
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 nmap <silent> <F3> :Lex<CR>
