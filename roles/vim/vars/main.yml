@@ -2,6 +2,7 @@
 
 plugins:
   - 'mtth/scratch.vim'
+  - 'godlygeek/tabular'
   - 'Shougo/deoplete.nvim'
   - 'roxma/nvim-yarp'
   - 'roxma/vim-hug-neovim-rpc'
