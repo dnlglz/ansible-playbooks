@@ -25,7 +25,6 @@ packages:
   - pv
   - pydf
   - renameutils
-  - ranger
   - rsync
   - task-spooler
   - tig
@@ -38,6 +37,7 @@ packages:
   - geany
   - pwgen
   - inotify-tools
+  - vifm
 
 packages_arch:
   - openssh

@@ -59,3 +59,9 @@
   with_fileglob: "{{ role_path }}/files/*.sh"
   become: yes
 
+- name: Copy vifm config folder
+  file:
+    src="{{ role_path }}/files/vifm"
+    dest="~/.vifm"
+    state=link
+  become: no
