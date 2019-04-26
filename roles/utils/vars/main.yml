@@ -2,6 +2,7 @@
 
 packages:
   - certbot
+  - pdfsam
   - ctags
   - jq
   - at
