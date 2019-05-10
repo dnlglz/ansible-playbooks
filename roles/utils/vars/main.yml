@@ -46,6 +46,7 @@ packages_arch:
   - keepassxc
   - perl-rename
   - tmuxp
+  - the_silver_searcher
 
 packages_debian:
   - anacron
