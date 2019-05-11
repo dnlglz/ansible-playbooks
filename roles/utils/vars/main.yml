@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - xdotool
   - entr
   - certbot
   - pdfsam
