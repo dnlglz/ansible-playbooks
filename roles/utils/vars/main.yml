@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - entr
   - certbot
   - pdfsam
   - ctags
