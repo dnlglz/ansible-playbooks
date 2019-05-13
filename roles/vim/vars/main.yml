@@ -3,10 +3,6 @@
 plugins:
   - 'mtth/scratch.vim'
   - 'godlygeek/tabular'
-  - 'Shougo/deoplete.nvim'
-  - 'roxma/nvim-yarp'
-  - 'roxma/vim-hug-neovim-rpc'
-  - 'SirVer/ultisnips'
   - 'honza/vim-snippets'
   - 'tpope/vim-dispatch' # run external commands asyncronously
   - 'Lokaltog/vim-easymotion'
