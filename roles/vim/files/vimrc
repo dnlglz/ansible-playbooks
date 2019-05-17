@@ -82,7 +82,8 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 set virtualedit=all
-set wildmenu wildmode=longest,list
+set wildmenu wildmode=full
+set wildcharm=<Tab>
 
 let g:AutoPairsShortcutFastWrap = '<C-e>'
 let g:AutoPairsShortcutToggle = '<C-h>'
