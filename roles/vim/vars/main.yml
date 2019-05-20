@@ -1,6 +1,7 @@
 ---
 
 plugins:
+  - 'rbong/vim-crystalline'
   - 'mtth/scratch.vim'
   - 'godlygeek/tabular'
   - 'honza/vim-snippets'
@@ -20,6 +21,5 @@ plugins:
   - 'tpope/vim-surround'
   - 'vim-scripts/bash-support.vim'
   - 'chrisbra/csv.vim'
-  - 'itchyny/lightline.vim'
   - 'w0rp/ale'
   - 'junegunn/fzf.vim'
