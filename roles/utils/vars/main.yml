@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - yamllint
   - xdotool
   - entr
   - certbot
