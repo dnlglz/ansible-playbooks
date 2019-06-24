@@ -2,17 +2,17 @@
 - name: All roles
   hosts: localhost
   roles:
-    - { role: system, tags: ['desktop', 'server', 'raspberry'] }
-    - { role: arch, tags: ['desktop'] }
-    - { role: vim, tags: ['desktop', 'vim', 'raspberry'] }
-    - { role: utils, tags: ['desktop', 'raspberry'] }
-    - { role: python, tags: ['desktop'] }
-    - { role: fun, tags: ['desktop', 'raspberry'] }
-    - { role: personal, tags: ['desktop', 'raspberry']  }
-    - { role: docker, tags: ['desktop', 'server', 'raspberry']  }
-    - { role: tmux, tags: ['desktop', 'server', 'raspberry']  }
-    - { role: image, tags: ['desktop', 'raspberry']  }
-    - { role: audio, tags: ['desktop', 'raspberry']  }
-    - { role: video, tags: ['desktop'] }
-    - { role: clear, tags: ['desktop'] }
-    - { role: debug, tags: ['test'] }
+    - {role: system, tags: ['desktop', 'server', 'raspberry']}
+    - {role: arch, tags: ['desktop']}
+    - {role: vim, tags: ['desktop', 'vim', 'raspberry']}
+    - {role: utils, tags: ['desktop', 'raspberry']}
+    - {role: python, tags: ['desktop']}
+    - {role: fun, tags: ['desktop', 'raspberry']}
+    - {role: personal, tags: ['desktop', 'raspberry']}
+    - {role: docker, tags: ['desktop', 'server', 'raspberry']}
+    - {role: tmux, tags: ['desktop', 'server', 'raspberry']}
+    - {role: image, tags: ['desktop', 'raspberry']}
+    - {role: audio, tags: ['desktop', 'raspberry']}
+    - {role: video, tags: ['desktop']}
+    - {role: clear, tags: ['desktop']}
+    - {role: debug, tags: ['test']}
