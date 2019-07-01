@@ -1,10 +1,12 @@
+---
+
 - name: Remove sylvia obs wrong repo
   apt_repository:
     repo={{ item }}
     state=absent
     codename="sylvia"
   with_items: "{{ ppas }}"
-  become: yes
+  become: true
   when: ansible_pkg_mgr=="apt"
 
 - name: Remove sonya obs wrong repo
@@ -13,7 +15,7 @@
     state=absent
     codename="sonya"
   with_items: "{{ ppas }}"
-  become: yes
+  become: true
   when: ansible_pkg_mgr=="apt"
 
 - name: Install ppas
@@ -22,16 +24,16 @@
     state=present
     codename="bionic"
   with_items: "{{ ppas }}"
-  ignore_errors: yes
-  become: yes
+  ignore_errors: true
+  become: true
   when: ansible_pkg_mgr=="apt"
 
 - name: Install video packages
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
 
 - name: Install scripts
   file:
@@ -39,16 +41,16 @@
     dest="/usr/local/bin/{{ item }}"
     state=link
   with_items: "{{ scripts }}"
-  become: yes
+  become: true
 
 - name: Remove pulverize repo
   file:
     path: "/var/repos/pulverize"
     state: absent
-  become: yes
+  become: true
 
 - name: Remove pulverize link
   file:
     path: "/usr/local/bin/pulverize.php"
     state: absent
-  become: yes
+  become: true

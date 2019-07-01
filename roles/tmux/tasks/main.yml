@@ -1,7 +1,9 @@
+---
+
 - name: Link config tmux file
   file:
     src={{ role_path }}/files/tmux.conf
     dest={{ ansible_env.HOME }}/.tmux.conf
     state=link
     force=yes
-  become: no
+  become: false

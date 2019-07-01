@@ -1,21 +1,23 @@
+---
+
 - name: Ensure repos directory exists
   file:
     path="/var/repos"
     state="directory"
     mode="o+rwx"
-  become: yes
+  become: true
 
 - name: Update debian family system
   apt:
     upgrade: safe
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 0
-  become: yes
+  become: true
   when: ansible_os_family=="Debian"
 
 - name: Update arch family system
   pacman:
-    upgrade: yes
-    update_cache: yes
-  become: yes
+    upgrade: true
+    update_cache: true
+  become: true
   when: ansible_os_family=="Archlinux"

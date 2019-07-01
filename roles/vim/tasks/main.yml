@@ -1,71 +1,71 @@
+---
 
 - name: Ensure .vim folder
   file:
       path: ~/.vim
       state: directory
-  become: no
+  become: false
 
 - name: Ensure .vim plugin folder
   file:
       path: "~/.vim/pack/bundle/start/"
       state: directory
-  become: no
+  become: false
 
 - name: Remove old configuration
   file:
-    path: "~/.vim/{{ item }}"
-    state: absent
+      path: "~/.vim/{{ item }}"
+      state: absent
   with_items:
-    - "plugged"
-    - "README.md"
-    - ".gitignore"
-    - ".git"
-    - "script"
-    - "autoload"
-  become: no
+      - "plugged"
+      - "README.md"
+      - ".gitignore"
+      - ".git"
+      - "script"
+      - "autoload"
+  become: false
 
 - name: Copy config files
   file:
       src: "{{ item }}"
       dest: "~/.vim/{{ item | basename }}"
       state: link
-      force: yes
+      force: true
   with_fileglob: "{{ role_path }}/files/*"
-  become: no
+  become: false
 
 - shell: ls -1 ~/.vim/pack/bundle/start/
   register: installed_plugins
-  become: no
-  changed_when: False
+  become: false
+  changed_when: false
 
 - name: Remove unused plugins
   file:
-    path: "~/.vim/pack/bundle/start/{{ item }}"
-    state: absent
+      path: "~/.vim/pack/bundle/start/{{ item }}"
+      state: absent
   with_items: "{{ installed_plugins.stdout_lines }}"
   when: item not in plugins | map('basename')
-  become: no
+  become: false
 
 - name: Install/update plugins
   git:
       repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
-      update: yes
-      recursive: no
+      update: true
+      recursive: false
       depth: 1
   with_items: "{{ plugins }}"
-  become: no
-  ignore_errors: yes
+  become: false
+  ignore_errors: true
 
 - name: Intall fzf repo
   git:
-    repo: 'https://github.com/junegunn/fzf.git'
-    dest: '~/.fzf'
-    update: yes
+      repo: 'https://github.com/junegunn/fzf.git'
+      dest: '~/.fzf'
+      update: true
   register: fzf_result
 
 - name: Install fzf
   command: "~/.fzf/install --all"
-  become: no
+  become: false
   when: fzf_result.changed
-

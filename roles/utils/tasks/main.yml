@@ -1,31 +1,32 @@
+---
 
 - name: Install util packages
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true
 
 - name: Install util packages for arch family
   pacman:
     name: "{{ packages_arch }}"
     state: present
-  become: yes
+  become: true
   when: ansible_pkg_mgr == "pacman"
 
 - name: Install util packages for debian family
   apt:
     name: "{{ packages_debian }}"
     state: present
-  become: yes
+  become: true
   when: ansible_pkg_mgr == "apt"
 
 - name: Create ansible log file
   copy:
     dest: /var/log/ansible.log
     content: ""
-    force: no
+    force: false
     mode: 0666
-  become: yes
+  become: true
 
 - name: Set up ansible debug mode
   lineinfile:
@@ -33,16 +34,16 @@
     regexp: '^stdout_callback = debug'
     line: 'stdout_callback = debug'
     insertafter: "^[defaults]"
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
 
 - name: Set up ansible logging
   lineinfile:
     dest: "/etc/ansible/ansible.cfg"
     regexp: '^#?log_path'
     line: 'log_path = /var/log/ansible.log'
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
 
 - name: Activate undistract-me
   lineinfile:
@@ -57,11 +58,11 @@
     dest="/usr/local/bin/{{ item | basename }}"
     state=link
   with_fileglob: "{{ role_path }}/files/*.sh"
-  become: yes
+  become: true
 
 - name: Copy vifm config folder
   file:
     src="{{ role_path }}/files/vifm"
     dest="~/.vifm"
     state=link
-  become: no
+  become: false

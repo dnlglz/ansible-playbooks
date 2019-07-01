@@ -1,5 +1,6 @@
+---
 - name: Remove packages
   package:
     name: "{{ packages }}"
     state: absent
-  become: yes
+  become: true

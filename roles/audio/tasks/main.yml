@@ -1,5 +1,6 @@
+---
 - name: Install audio packages
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
+  become: true

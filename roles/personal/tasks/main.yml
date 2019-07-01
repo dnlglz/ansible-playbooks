@@ -1,37 +1,39 @@
+---
+
 - name: Set git name
   git_config:
     name: user.name
     scope: global
     value: "{{ git_name }}"
-  become: no
+  become: false
 
 - name: Set git email
   git_config:
     name: user.email
     scope: global
     value: "{{ git_email }}"
-  become: no
+  become: false
 
 - name: Set git default push
   git_config:
     name: push.default
     scope: global
     value: "matching"
-  become: no
+  become: false
 
 - name: Set git default editor
   git_config:
     name: core.editor
     scope: global
     value: vim
-  become: no
+  become: false
 
 - name: Set git color ui
   git_config:
     name: color.ui
     scope: global
     value: auto
-  become: no
+  become: false
 
 - name: Set vim as default editor
   lineinfile:
@@ -71,12 +73,6 @@
     line: 'if [ -f /usr/bin/screenfetch ]; then screenfetch; fi'
     state: absent
 
-- name: Prettier log
-  git_config:
-    name: alias.lg
-    scope: global
-    value: 'log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr, %cn)%Creset" --abbrev-commit --date=relative'
-
 - name: Install guake
   package:
     name: guake
@@ -87,11 +83,11 @@
   file:
     path: "~/.pip"
     state: directory
-  become: no
+  become: false
 
 - name: Link pip.conf
   file:
     src: "{{ role_path }}/files/pip.conf"
     dest: "~/.pip/pip.conf"
     state: link
-  become: no
+  become: false

@@ -10,7 +10,7 @@ packages:
   - jq
   - at
   - bmon
-  - cloc  #Count lines of code
+  - cloc  # Count lines of code
   - git
   - gnupg
   - gparted
@@ -53,11 +53,11 @@ packages_arch:
 
 packages_debian:
   - anacron
-  - apg  #random password generator
+  - apg  # random password generator
   - aptitude
   - openssh-client
   - openssh-server
-  - texlive-fonts-recommended #for pandoc to pdf
+  - texlive-fonts-recommended   # for pandoc to pdf
   - build-essential
   - git-extras
   - libimage-exiftool-perl
@@ -65,4 +65,4 @@ packages_debian:
   - tlp-rdw
   - undistract-me
   - vim-gtk
-  - byobu #For remove-old-kernels
+  - byobu   # For remove-old-kernels

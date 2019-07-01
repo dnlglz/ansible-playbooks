@@ -1,20 +1,21 @@
+---
 - name: Install docker packages for debian family
   apt:
     name: "{{ packages_debian }}"
     state: present
-  become: yes
+  become: true
   when: ansible_pkg_mgr == "apt"
 
 - name: Install docker packages for arch family
   pacman:
     name: "{{ packages_arch }}"
     state: present
-  become: yes
+  become: true
   when: ansible_pkg_mgr == "pacman"
 
 - name: Add current user to docker group
   user:
     name: "{{ ansible_env.USER }}"
     groups: docker
-    append: yes
-  become: yes
+    append: true
+  become: true

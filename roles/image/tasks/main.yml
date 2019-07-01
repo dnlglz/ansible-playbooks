@@ -1,18 +1,20 @@
+---
+
 - name: Install image packages
   package:
     name: "{{ packages }}"
     state: present
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
 
 - name: Remove pencil folder
   file:
     path: "/var/repos/pencil"
     state: absent
-  become: yes
+  become: true
 
 - name: Remove pencil link
   file:
     path: "/usr/local/bin/pencil"
     state: absent
-  become: yes
+  become: true

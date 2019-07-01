@@ -1,9 +1,11 @@
+---
+
 - name: Purge python packages via apt
   package:
     name: "{{ purge_packages }}"
     state: absent
-  ignore_errors: yes
-  become: yes
+  ignore_errors: true
+  become: true
   when: ansible_pkg_mgr=="apt"
 
 - name: Remove python packages via pip in debian family
@@ -11,16 +13,16 @@
     name: "{{ purge_pip_packages }}"
     state: absent
     executable: pip3
-  ignore_errors: yes
-  become: yes
+  ignore_errors: true
+  become: true
   when: ansible_os_family=="Debian"
 
 - name: Install python packages via apt
   package:
     name: "{{ packages }}"
     state: latest
-  ignore_errors: yes
-  become: yes
+  ignore_errors: true
+  become: true
   when: ansible_pkg_mgr=="apt"
 
 - name: Install python packages via pip in debian family
@@ -29,18 +31,18 @@
     state: latest
     executable: pip3
     extra_args: --ignore-installed
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
   when: ansible_os_family=="Debian"
 
 - name: Ensure ptpython folder exists
   file:
     dest: "{{ ansible_env.HOME }}/.ptpython/"
     state: directory
-  become: no
+  become: false
 
 - name: Ptipython config file
   file:
     dest: "{{ ansible_env.HOME }}/.ptpython/config.py"
     state: absent
-  become: no
+  become: false
