@@ -1,3 +1,3 @@
 #!/bin/bash
 
-time ansible-playbook site.yml --tags test
+ansible-playbook site.yml --tags test $*

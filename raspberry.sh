@@ -1,3 +1,3 @@
 #!/bin/bash
 
-time ansible-playbook site.yml --tags raspberry
+ansible-playbook site.yml --tags raspberry $*

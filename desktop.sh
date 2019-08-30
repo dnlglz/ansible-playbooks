@@ -1,3 +1,3 @@
 #!/bin/bash
 
-time ansible-playbook site.yml --tags desktop
+ansible-playbook site.yml --tags desktop $*
