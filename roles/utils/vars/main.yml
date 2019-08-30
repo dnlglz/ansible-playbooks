@@ -1,6 +1,7 @@
 ---
 
 packages:
+  - ansible-lint
   - yamllint
   - sshpass
   - xdotool
