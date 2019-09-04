@@ -143,6 +143,7 @@ map <Leader>m :Marks<CR>
 map <Leader>t :Tags<CR>
 map <Leader>r :w !bash<cr>
 map <Leader>c :!iconv -f utf8 -t ascii//TRANSLIT <cr>
+map <Leader>w :w<cr>
 
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 nmap <silent> <F3> :Lex<CR>
