@@ -1,25 +1,24 @@
 ---
 
 plugins:
-  - 'rbong/vim-crystalline'
-  - 'mtth/scratch.vim'
-  - 'godlygeek/tabular'
-  - 'honza/vim-snippets'
-  - 'tpope/vim-dispatch'   # run external commands asyncronously
-  - 'Lokaltog/vim-easymotion'
-  - 'airblade/vim-gitgutter'
-  - 'altercation/vim-colors-solarized'
-  - 'jiangmiao/auto-pairs'
-  - 'jpalardy/vim-slime'
-  - 'mattn/emmet-vim'
-  - 'scrooloose/syntastic'
-  - 'sheerun/vim-polyglot'
-  - 'tomtom/tcomment_vim'
-  - 'tomtom/tlib_vim'
-  - 'tpope/vim-fugitive'
-  - 'tpope/vim-obsession'
-  - 'tpope/vim-surround'
-  - 'vim-scripts/bash-support.vim'
-  - 'chrisbra/csv.vim'
-  - 'w0rp/ale'
-  - 'junegunn/fzf.vim'
+  - 'rbong/vim-crystalline'            # vim status line
+  - 'mtth/scratch.vim'                 # Unobtrusive scratch window
+  - 'godlygeek/tabular'                # :Tab /, to tabulize csv, for example
+  - 'tpope/vim-dispatch'               # run external commands asyncronously
+  - 'Lokaltog/vim-easymotion'          # ,,s to launch it
+  - 'airblade/vim-gitgutter'           # Show git information inside vim
+  - 'altercation/vim-colors-solarized' # My favourite color scheme!!!
+  - 'jiangmiao/auto-pairs'             # Autocinsert close brackets
+  - 'jpalardy/vim-slime'               # C-c to send a block to tmux
+  - 'mattn/emmet-vim'                  # y, in insert mode to expand to html
+  - 'scrooloose/syntastic'             # Syntaxis checker
+  - 'sheerun/vim-polyglot'             # Pack of color schemes
+  - 'tomtom/tcomment_vim'              # Comment quickly in several environments
+  - 'tomtom/tlib_vim'                  # Library for other plugins
+  - 'tpope/vim-fugitive'               # Git inside vim
+  - 'tpope/vim-obsession'              # Save and restore vim sessions
+  - 'tpope/vim-surround'               # Advanced surrond operations
+  - 'vim-scripts/bash-support.vim'     # Bash utils for vim
+  - 'chrisbra/csv.vim'                 # Some functions to work with csv files
+  - 'dense-analysis/ale'               # Asynchronous lint engine
+  - 'junegunn/fzf.vim'                 # Fuzzy finder for files, buffers,...
