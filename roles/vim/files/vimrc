@@ -64,6 +64,7 @@ set nowritebackup
 set nu
 set rnu
 set ruler
+set scrolloff=5
 set softtabstop=4
 set shell=/bin/sh
 set shiftround
