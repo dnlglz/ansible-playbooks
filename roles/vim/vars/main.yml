@@ -1,6 +1,7 @@
 ---
 
 plugins:
+  - 'markonm/traces.vim'                # substitute preview
   - 'rbong/vim-crystalline'             # vim status line
   - 'mtth/scratch.vim'                  # Unobtrusive scratch window
   - 'godlygeek/tabular'                 # :Tab /, to tabulize csv, for example
