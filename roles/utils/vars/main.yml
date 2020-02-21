@@ -44,6 +44,7 @@ packages:
   - pwgen
   - inotify-tools
   - vifm
+  - zathura-pdf-mupdf
 
 packages_arch:
   - openssh
