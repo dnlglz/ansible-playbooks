@@ -90,6 +90,7 @@ let g:AutoPairsShortcutFastWrap = '<C-f>'
 let g:AutoPairsShortcutToggle = '<C-h>'
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 
