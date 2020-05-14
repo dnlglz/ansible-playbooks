@@ -25,6 +25,14 @@
   become: true
   when: ansible_pkg_mgr=="apt"
 
+- name: Install python packages via pacman
+  package:
+    name: "{{ packages_pac }}"
+    state: latest
+  ignore_errors: true
+  become: true
+  when: ansible_pkg_mgr=="pacman"
+
 - name: Install python packages via pip in debian family
   pip:
     name: "{{ pip_packages }}"

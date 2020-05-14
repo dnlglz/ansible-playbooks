@@ -29,6 +29,9 @@ packages:
   - libgirepository1.0-dev    # for pycairo
   - docker-compose
 
+packages_pac:
+  - python-poetry
+
 purge_pip_packages:
   - xonsh
   - wharfee      # docker cli
