@@ -54,24 +54,11 @@
     line: 'eval "$(_TMUXP_COMPLETE=source tmuxp)"'
     state: present
 
-- name: Create or attach to tmux session
-  lineinfile:
-    dest: ~/.bashrc
-    regexp: '^(.*)tmux -2 new-session -A -s initial(.*)'
-    line: '{{ tmux }}'
-
 - name: Set autocd in bashrc
   lineinfile:
     dest: ~/.bashrc
     regexp: 'shopt -s autocd'
     line: 'shopt -s autocd'
-
-- name: Remove screenfetch
-  lineinfile:
-    dest: ~/.bashrc
-    regexp: '^.*then screenfetch.*$'
-    line: 'if [ -f /usr/bin/screenfetch ]; then screenfetch; fi'
-    state: absent
 
 - name: Install guake
   package:
