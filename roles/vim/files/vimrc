@@ -48,7 +48,7 @@ set cursorline
 set dictionary=~/.vimrc
 set encoding=utf-8
 set expandtab
-set exrc                                    # Enables run local config
+set exrc                                    " Enables run local config
 set foldmethod=marker
 set hidden
 set hlsearch
@@ -66,7 +66,7 @@ set nu
 set rnu
 set ruler
 set scrolloff=5
-set secure                                  # Disallows the use of :autocmd, shell and write commands in local .vimrc files
+set secure                                  " Disallows the use of :autocmd, shell and write commands in local .vimrc files
 set shell=/bin/sh
 set shiftround
 set shiftwidth=4
