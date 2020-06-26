@@ -43,7 +43,7 @@ packages:
   - geany
   - pwgen
   - inotify-tools
-  - vifm
+  - ranger
   - zathura-pdf-mupdf
 
 packages_arch:
