@@ -161,6 +161,9 @@ nnoremap <silent> <c-l> :SlimeSend1 <cr>
 nnoremap Q @
 nnoremap @ Q
 
+" Execute current line
+nnoremap <Leader>x :exe getline(line('.'))<cr>
+
 omap <space> <Plug>(easymotion-tn)
 
 "split navigations
