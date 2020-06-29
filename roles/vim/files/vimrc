@@ -54,6 +54,7 @@ set hidden
 set hlsearch
 set ignorecase
 set laststatus=2
+set lazyredraw
 set list listchars=trail:·,tab:»·,eol:¬
 set noautochdir
 set nobackup
