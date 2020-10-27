@@ -54,6 +54,7 @@ packages_arch:
   - perl-rename
   - tmuxp
   - the_silver_searcher
+  - vscode
 
 packages_debian:
   - anacron
