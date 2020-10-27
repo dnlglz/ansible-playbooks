@@ -2,23 +2,24 @@
 
 packages:
   - ansible-lint
-  - yamllint
-  - sshpass
-  - xdotool
-  - entr
-  - certbot
-  - pdfsam
-  - ctags
-  - jq
   - at
   - bmon
+  - certbot
+  - clipit
   - cloc  # Count lines of code
+  - ctags
+  - curl
+  - entr
+  - geany
   - git
   - gnupg
   - gparted
   - htop
+  - httpie
   - incron
+  - inotify-tools
   - iotop
+  - jq
   - lftp
   - lnav
   - most
@@ -27,23 +28,23 @@ packages:
   - ncdu
   - openssl
   - pandoc
+  - pdfsam
   - preload
   - pv
+  - pwgen
   - pydf
+  - ranger
   - renameutils
   - rsync
+  - sshpass
   - task-spooler
   - tig
   - tlp
   - tmux
   - tree
   - xclip
-  - clipit
-  - curl
-  - geany
-  - pwgen
-  - inotify-tools
-  - ranger
+  - xdotool
+  - yamllint
   - zathura-pdf-mupdf
 
 packages_arch:
