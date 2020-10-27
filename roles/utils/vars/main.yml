@@ -48,27 +48,27 @@ packages:
   - zathura-pdf-mupdf
 
 packages_arch:
-  - openssh
-  - xorg-xkill
   - cronie
   - keepassxc
+  - openssh
   - perl-rename
-  - tmuxp
   - the_silver_searcher
+  - tmuxp
   - vscode
+  - xorg-xkill
 
 packages_debian:
   - anacron
   - apg  # random password generator
   - aptitude
-  - openssh-client
-  - openssh-server
-  - texlive-fonts-recommended   # for pandoc to pdf
   - build-essential
+  - byobu   # For remove-old-kernels
   - git-extras
   - libimage-exiftool-perl
+  - openssh-client
+  - openssh-server
   - silversearcher-ag
+  - texlive-fonts-recommended   # for pandoc to pdf
   - tlp-rdw
   - undistract-me
   - vim-gtk
-  - byobu   # For remove-old-kernels
