@@ -13,21 +13,20 @@ purge_packages:
   - spyder3
 
 packages:
-  - ipython3
-  - python3-dev
-  - python3-setuptools
-  - python3-pip
-  - python3-tk
   - gfortran
-  - virtualenv
+  - libcairo2-dev    # for pycairo
+  - libcurl4-openssl-dev    # for pycurl
   - libfreetype6-dev    # for matplotlib
+  - libgirepository1.0-dev    # for pycairo
   - libicu-dev    # for PyICU
   - libssl-dev    # for pycurl
-  - libcurl4-openssl-dev    # for pycurl
   - python-dev    # for pycurl
-  - libcairo2-dev    # for pycairo
-  - libgirepository1.0-dev    # for pycairo
-  - docker-compose
+  - python-pipx
+  - python3-dev
+  - python3-pip
+  - python3-setuptools
+  - python3-tk
+  - virtualenv
 
 packages_pac:
   - python-poetry
