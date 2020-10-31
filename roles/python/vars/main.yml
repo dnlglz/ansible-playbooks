@@ -20,6 +20,7 @@ packages:
   - libgirepository1.0-dev    # for pycairo
   - libicu-dev    # for PyICU
   - libssl-dev    # for pycurl
+  - pyenv
   - python-dev    # for pycurl
   - python-pipx
   - python3-dev
@@ -30,6 +31,7 @@ packages:
 
 packages_pac:
   - python-poetry
+  - pyenv
 
 purge_pip_packages:
   - xonsh
