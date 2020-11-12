@@ -8,6 +8,7 @@ packages:
   - obs-studio  # if remove this, remove also his ppa
   - smplayer
   - vlc
+  - aegisub
 
 scripts:
   - extractmp3.sh
