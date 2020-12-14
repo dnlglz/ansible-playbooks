@@ -37,7 +37,6 @@ packages:
   - renameutils
   - rsync
   - sshpass
-  - task-spooler
   - tig
   - tlp
   - tmux
@@ -49,11 +48,9 @@ packages:
 
 packages_arch:
   - cronie
-  - keepassxc
   - openssh
   - perl-rename
   - the_silver_searcher
-  - tmuxp
   - vscode
   - xorg-xkill
 
