@@ -9,7 +9,6 @@ plugins:
   - 'Lokaltog/vim-easymotion'           # ,,s to launch it
   - 'airblade/vim-gitgutter'            # Show git information inside vim
   - 'altercation/vim-colors-solarized'  # My favourite color scheme!!!
-  - 'jiangmiao/auto-pairs'              # Autocinsert close brackets
   - 'jpalardy/vim-slime'                # C-c to send a block to tmux
   - 'mattn/emmet-vim'                   # y, in insert mode to expand to html
   - 'scrooloose/syntastic'              # Syntaxis checker

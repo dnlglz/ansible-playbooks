@@ -172,5 +172,6 @@ augroup RemoveTrailingWSOnWrite
     autocmd!
     autocmd BufWritePre * :execute "normal mc" | :%s/\s\+$//e | :normal `c
 augroup END
+source ~/.vim/config/autoclose.vim
 " }}}
 

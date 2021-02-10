@@ -6,6 +6,12 @@
       state: directory
   become: false
 
+- name: Ensure .vim/config folder
+  file:
+      path: ~/.vim/config
+      state: directory
+  become: false
+
 - name: Ensure .vim plugin folder
   file:
       path: "~/.vim/pack/bundle/start/"
@@ -25,7 +31,7 @@
       - "autoload"
   become: false
 
-- name: Copy config files
+- name: Copy base config files
   file:
       src: "{{ item }}"
       dest: "~/.vim/{{ item | basename }}"
@@ -34,6 +40,15 @@
   with_fileglob: "{{ role_path }}/files/*"
   become: false
 
+- name: Copy custom config files
+  file:
+      src: "{{ item }}"
+      dest: "~/.vim/config/{{ item | basename }}"
+      state: link
+      force: true
+  with_fileglob: "{{ role_path }}/config/*"
+
+  become: false
 - shell: ls -1 ~/.vim/pack/bundle/start/
   register: installed_plugins
   become: false
