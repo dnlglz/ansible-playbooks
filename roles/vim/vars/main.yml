@@ -17,4 +17,5 @@ plugins:
   - 'tomtom/tlib_vim'                  # Library for other plugins
   - 'machakann/vim-sandwich'           # Vim surround replacement
   - 'dense-analysis/ale'               # Asynchronous lint engine
+  - 'prettier/vim-prettier'            # leader p to prettier file
   - 'junegunn/fzf.vim'                 # Fuzzy finder for files, buffers,...

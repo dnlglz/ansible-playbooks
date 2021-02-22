@@ -54,6 +54,12 @@
   become: false
   changed_when: false
 
+- name: Install prettier
+  package:
+    name: prettier
+    state: latest
+  become: true
+
 - name: Remove unused plugins
   file:
       path: "~/.vim/pack/bundle/start/{{ item }}"
