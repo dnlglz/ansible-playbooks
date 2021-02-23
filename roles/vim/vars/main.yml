@@ -18,4 +18,5 @@ plugins:
   - 'machakann/vim-sandwich'           # Vim surround replacement
   - 'dense-analysis/ale'               # Asynchronous lint engine
   - 'prettier/vim-prettier'            # leader p to prettier file
+  - 'psf/black'                        # Prettify Python code
   - 'junegunn/fzf.vim'                 # Fuzzy finder for files, buffers,...
