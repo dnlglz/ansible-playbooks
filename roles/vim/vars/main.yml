@@ -20,3 +20,5 @@ plugins:
   - 'prettier/vim-prettier'            # leader p to prettier file
   - 'psf/black'                        # Prettify Python code
   - 'junegunn/fzf.vim'                 # Fuzzy finder for files, buffers,...
+  - 'SirVer/ultisnips'
+  - 'honza/vim-snippets'
