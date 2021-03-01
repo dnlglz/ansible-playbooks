@@ -22,7 +22,6 @@ packages:
   - jq
   - lftp
   - lnav
-  - most
   - mtr
   - multitail
   - ncdu
