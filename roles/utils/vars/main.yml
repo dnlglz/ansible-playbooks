@@ -3,6 +3,7 @@
 packages:
   - ansible-lint
   - at
+  - bat
   - bmon
   - certbot
   - clipit
