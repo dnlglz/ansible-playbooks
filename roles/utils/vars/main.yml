@@ -47,6 +47,7 @@ packages:
   - zathura-pdf-mupdf
 
 packages_arch:
+  - bpytop
   - cronie
   - openssh
   - perl-rename
