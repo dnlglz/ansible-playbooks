@@ -2,41 +2,25 @@
 
 packages:
   - ansible-lint
-  - at
-  - bat
-  - bmon
-  - certbot
-  - clipit
-  - cloc  # Count lines of code
   - ctags
   - curl
   - entr
-  - geany
   - git
   - gnupg
   - gparted
   - htop
   - httpie
-  - incron
-  - inotify-tools
-  - iotop
   - jq
   - lftp
   - lnav
-  - mtr
-  - multitail
   - ncdu
   - openssl
   - pandoc
-  - pdfsam
   - preload
   - pv
-  - pwgen
   - pydf
   - ranger
-  - renameutils
   - rsync
-  - sshpass
   - tig
   - tlp
   - tmux
@@ -44,7 +28,6 @@ packages:
   - xclip
   - xdotool
   - yamllint
-  - zathura-pdf-mupdf
 
 packages_arch:
   - bpytop
