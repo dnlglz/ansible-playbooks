@@ -71,6 +71,7 @@
 - name: Install/update plugins
   git:
       repo: 'git@github.com:{{ item  }}.git'
+      repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
       update: true
       recursive: false
