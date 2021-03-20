@@ -126,7 +126,7 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 map <Leader>a :Ag<CR>
 map <Leader>b :Buffers<CR>
-map <Leader>f :GFiles<CR>
+map <Leader>f :Files<CR>
 map <Leader>m :Marks<CR>
 map <Leader>t :Tags<CR>
 map <Leader>r :w !bash<cr>
