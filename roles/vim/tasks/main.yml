@@ -56,8 +56,8 @@
 
 - name: Install prettier
   package:
-    name: prettier
-    state: latest
+      name: prettier
+      state: latest
   become: true
 
 - name: Remove unused plugins
@@ -70,7 +70,6 @@
 
 - name: Install/update plugins
   git:
-      repo: 'git@github.com:{{ item  }}.git'
       repo: 'https://github.com/{{ item  }}'
       dest: '~/.vim/pack/bundle/start/{{ item | basename }}'
       update: true
@@ -85,9 +84,4 @@
       repo: 'https://github.com/junegunn/fzf.git'
       dest: '~/.fzf'
       update: true
-  register: fzf_result
-
-- name: Install fzf
-  command: "~/.fzf/install --all"
-  become: false
-  when: fzf_result.changed
+  notify: Install fzf
