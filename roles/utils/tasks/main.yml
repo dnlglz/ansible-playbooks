@@ -49,7 +49,7 @@
   lineinfile:
     dest: "~/.bashrc"
     regexp: ".*undistract-me\\.sh.*"
-    line: "source /etc/profile.d/undistract-me.sh"
+    line: "source /usr/share/undistract-me/undistract-me.sh"
   become: false
 
 - name: Install scripts
