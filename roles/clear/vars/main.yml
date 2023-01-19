@@ -1,7 +1,6 @@
 ---
 
 packages:
-  - ark
   - screenfetch
 
 packages_arch:
